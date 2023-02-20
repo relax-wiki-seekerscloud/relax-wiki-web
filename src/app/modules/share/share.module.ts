@@ -4,16 +4,19 @@ import { CommonModule } from '@angular/common';
 import { ShareRoutingModule } from './share-routing.module';
 import { ShareComponent } from './share.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     ShareComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
-  exports: [
-    NavBarComponent
-  ],
+    exports: [
+        NavBarComponent,
+        FooterComponent
+    ],
   imports: [
     CommonModule,
     ShareRoutingModule
