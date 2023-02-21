@@ -32,10 +32,6 @@
   font-weight: bold;
 }
 
-.relaxwiki-logo{
-  font-size: 32px;
-  font-weight: bold;
-}
 
 .signup-outer{
   width: 320px;
@@ -190,11 +186,6 @@
     overflow: hidden;
   }
 
-  .relaxwiki-logo{
-    font-size: 24px;
-    font-weight: bold;
-  }
-
   .signup-block-img,.other-img{
     margin-top: 5px;
     width: 25px;
@@ -246,10 +237,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .relaxwiki-logo{
-    font-size: 24px;
-    font-weight: bold;
-  }
+
   .nav-bar{
     overflow: hidden;
     height: 125px;
@@ -293,10 +281,6 @@
 
 @media only screen and (max-width : 520px) {
 
-  .relaxwiki-logo{
-    font-size: 22px;
-    font-weight: bold;
-  }
   .signup-block-img,.other-img{
     margin-top: 10px;
     width: 17px;
