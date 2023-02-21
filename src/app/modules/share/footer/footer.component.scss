@@ -7,11 +7,11 @@
   color: white;
 }
 .footer-inner-main{
-  //border: 1px solid red;
+ // border: 1px solid red;
   height: 200px;
   margin-top: 40px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 150px;
+  margin-right: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -201,4 +201,86 @@ hr{
   width: 23px;
   height: 23px;
   display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-inner-main{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+}
+
+@media screen and (max-width: 770px) {
+
+  .footer-main{
+    height: 360px;
+  }
+  .footer-inner-quick-links{
+    display: none;
+  }
+  .footer-inner-quick-links-list{
+    margin-top: 0;
+  }
+  .footer-inner-about{
+    height: 120px;
+    margin-left: 50px;
+    width: 130px;
+  }
+  .footer-inner-news-letter-inputs{
+    margin-top: 0px;
+  }
+
+  .footer-inner-news-letter{
+    //border: 1px solid red;
+    margin-left: 20px;
+    width: 200px;
+  }
+  .relaxwiki-logo{
+    font-size: 25px;
+    font-weight: bold;
+    //border: 1px solid red;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .footer-main{
+    height: 650px;
+  }
+  .footer-inner-main{
+    display: block;
+  }
+
+  .footer-inner-sub{
+    //border: 1px solid red;
+    margin-top: 300px;
+  }
+  .contact-details-main{
+    width: 150px;
+  }
+
+  .footer-inner-about{
+    margin-left: 0;
+    width: 200px;
+  }
+  .footer-inner-news-letter{
+    width: 200px;
+    margin-left: 0;
+  }
+  .footer-inner-main-first{
+    width: 200px;
+  }
+  .footer-inner-main{
+    width: 200px;
+    margin-left: 200px;
+  }
+
+}
+
+@media only screen and (max-width : 520px) {
+  .footer-inner-main{
+    margin-left: 100px;
+  }
+
 }
