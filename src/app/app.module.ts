@@ -10,6 +10,8 @@ import { HotelComponent } from './modules/main/hotel/hotel.component';
 import { ResturentComponent } from './modules/main/resturent/resturent.component';
 import { EntertainmentComponent } from './modules/main/entertainment/entertainment.component';
 import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.component';
+import { SearchRestaurantsComponent } from './modules/main/search-restaurants/search-restaurants.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.comp
     HotelComponent,
     ResturentComponent,
     EntertainmentComponent,
-    TaxiRentalComponent
+    TaxiRentalComponent,
+    SearchRestaurantsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ShareModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ShareModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
