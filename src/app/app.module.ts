@@ -10,6 +10,7 @@ import { HotelComponent } from './modules/main/hotel/hotel.component';
 import { ResturentComponent } from './modules/main/resturent/resturent.component';
 import { EntertainmentComponent } from './modules/main/entertainment/entertainment.component';
 import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.component';
+import { AdvertisementsComponent } from './modules/main/advertisements/advertisements.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.comp
     HotelComponent,
     ResturentComponent,
     EntertainmentComponent,
-    TaxiRentalComponent
+    TaxiRentalComponent,
+    AdvertisementsComponent
   ],
   imports: [
     BrowserModule,
