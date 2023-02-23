@@ -10,6 +10,11 @@ import { HotelComponent } from './modules/main/hotel/hotel.component';
 import { ResturentComponent } from './modules/main/resturent/resturent.component';
 import { EntertainmentComponent } from './modules/main/entertainment/entertainment.component';
 import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.component';
+import {LoginPageComponent} from "./modules/Main/login-page/login-page.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {SignUpPageComponent} from "./modules/Main/sign-up-page/sign-up-page.component";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import { TaxiRentalComponent } from './modules/main/taxi-rental/taxi-rental.comp
     HotelComponent,
     ResturentComponent,
     EntertainmentComponent,
-    TaxiRentalComponent
+    TaxiRentalComponent,
+    LoginPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ShareModule
+    ShareModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
