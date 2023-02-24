@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ShareRoutingModule } from './share-routing.module';
 import { ShareComponent } from './share.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavBarTwoComponent } from './nav-bar-two/nav-bar-two.component';
-import { FooterTwoComponent } from './footer-two/footer-two.component';
-import { RelaxwikiLogoComponent } from './relaxwiki-logo/relaxwiki-logo.component';
+import {FooterComponent} from "./components/footer/footer.component";
+import {FooterTwoComponent} from "./components/footer-two/footer-two.component";
+import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
+import {NavBarTwoComponent} from "./components/nav-bar-two/nav-bar-two.component";
+import {RelaxwikiLogoComponent} from "./components/relaxwiki-logo/relaxwiki-logo.component";
 
 
 @NgModule({
   declarations: [
     ShareComponent,
-    NavBarComponent,
     FooterComponent,
-    NavBarTwoComponent,
     FooterTwoComponent,
+    NavBarComponent,
+    NavBarTwoComponent,
     RelaxwikiLogoComponent
   ],
   exports: [
-    NavBarComponent,
     FooterComponent,
+    FooterTwoComponent,
+    NavBarComponent,
     NavBarTwoComponent,
-    FooterTwoComponent
+
   ],
   imports: [
     CommonModule,
