@@ -7,6 +7,10 @@ import {FooterTwoComponent} from "./components/footer-two/footer-two.component";
 import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 import {NavBarTwoComponent} from "./components/nav-bar-two/nav-bar-two.component";
 import {RelaxwikiLogoComponent} from "./components/relaxwiki-logo/relaxwiki-logo.component";
+import { PaymentUserDetailsComponent } from './components/payment-user-details/payment-user-details.component';
+import { PaymentCardDetailsComponent } from './components/payment-card-details/payment-card-details.component';
+import { PaymentSuccessfulComponent } from './components/payment-successful/payment-successful.component';
+import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import {RelaxwikiLogoComponent} from "./components/relaxwiki-logo/relaxwiki-logo
     FooterTwoComponent,
     NavBarComponent,
     NavBarTwoComponent,
-    RelaxwikiLogoComponent
+    RelaxwikiLogoComponent,
+    PaymentUserDetailsComponent,
+    PaymentCardDetailsComponent,
+    PaymentSuccessfulComponent,
+    FeedbackFormComponent
   ],
   exports: [
     FooterComponent,
