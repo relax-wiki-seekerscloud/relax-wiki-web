@@ -31,6 +31,7 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
     FooterTwoComponent,
     NavBarComponent,
     NavBarTwoComponent,
+    RelaxwikiLogoComponent,
 
   ],
   imports: [
