@@ -6,6 +6,10 @@ import { SecurityComponent } from './security.component';
 import { LoginComponent } from './components/login/login.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {FormsModule} from "@angular/forms";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
   imports: [
     CommonModule,
     SecurityRoutingModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    MatIconModule
   ]
 })
 export class SecurityModule { }

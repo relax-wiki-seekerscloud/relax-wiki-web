@@ -11,6 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {SecurityModule} from "./modules/security/security.module";
 import {ConsoleModule} from "./modules/console/console.module";
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -34,3 +35,4 @@ import {ConsoleModule} from "./modules/console/console.module";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
