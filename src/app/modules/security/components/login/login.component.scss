@@ -7,10 +7,9 @@ main{
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   flex: 5;
-
 }
 .imageArea{
-  background-image: url("/../../../../../assets/Images/login-page.png");
+  background-image: url("../../../../../assets/images/login-page.png");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -23,7 +22,6 @@ main{
   display: flex;
   align-items: center;
   padding: 2rem;
-
 }
 
 .header h1{
@@ -31,6 +29,7 @@ main{
 }
 .bodyHeading{
   text-align: center;
+  font-size: 1.8rem;
 }
 .body{
   padding: 4rem 0;
@@ -39,11 +38,11 @@ main{
 .loginBox{
   background-color: #ecedef;
   padding: 2rem 3rem;
-  width: 30rem;
   margin:2rem auto;
   display: grid;
-
   align-items: center;
+  width:30rem;
+  max-width:calc(100% - 3rem);
 }
 .inputHeader{
   margin: 0;
@@ -57,17 +56,37 @@ main{
   justify-content: center;
 }
 .loginButtonContainer Button{
-  width: 20rem;
-}
+  padding: 0 5rem;
+ }
 .footer{
   height: 5rem;
   margin:auto;
-  width: 30rem;
   border-top: 2px solid lightgray;
   padding:2rem;
   text-align: center;
 }
 
-/*.input:focus{*/
-/*  background-color: green;*/
-/*}*/
+@media screen and (max-width: 770px) {
+  .imageArea{
+      display: none;
+  }
+  .loginBox{
+    max-width:calc(100% - 3rem);
+  }
+  .contentArea{
+    background-image: url("../../../../../assets/images/login-page-white.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header{
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .loginBox{
+    width:100%;
+    padding:1rem;
+  }
+}

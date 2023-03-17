@@ -1,0 +1,54 @@
+.name-area{
+  text-align: center;
+  h1{
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+h4{
+  margin: 0;
+}
+.room-description-container{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap:  4rem;
+  width: 100%;
+}
+.input-field{
+  width: 100%;
+}
+
+.container-right-inner-one{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+.radio-input{
+  justify-content: space-between;
+
+  display:flex;
+}
+.container-below-questions-area{
+  display: flex;
+  gap: 4rem;
+  padding: 1rem 3rem;
+}
+
+.container-below-questions-area{
+  display: flex;
+  gap: 4rem;
+  padding: 1rem 3rem;
+}
+
+.container-below-answers{
+  max-width: 15%;
+}
+.container-below-questions{
+  align-items: center;
+}
+.bed-info{
+  display: grid;
+  grid-template-columns:3fr 2fr;
+  gap: 2rem;
+}

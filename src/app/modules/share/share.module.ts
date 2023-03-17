@@ -11,7 +11,12 @@ import { PaymentUserDetailsComponent } from './components/payment-user-details/p
 import { PaymentCardDetailsComponent } from './components/payment-card-details/payment-card-details.component';
 import { PaymentSuccessfulComponent } from './components/payment-successful/payment-successful.component';
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
-
+import {StatusBarComponent} from "./components/status-bar/status-bar.component";
+import { InputFieldComponent } from './components/input-field/input-field.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
+import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
 
 @NgModule({
   declarations: [
@@ -24,19 +29,29 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
     PaymentUserDetailsComponent,
     PaymentCardDetailsComponent,
     PaymentSuccessfulComponent,
-    FeedbackFormComponent
+    FeedbackFormComponent,
+    StatusBarComponent,
+    InputFieldComponent,
+    HotelCategoryContainerBoxComponent,
+    HotelRoomContainerBoxComponent
   ],
-  exports: [
-    FooterComponent,
-    FooterTwoComponent,
-    NavBarComponent,
-    NavBarTwoComponent,
-    RelaxwikiLogoComponent,
+    exports: [
+        FooterComponent,
+        FooterTwoComponent,
+        NavBarComponent,
+        NavBarTwoComponent,
+        RelaxwikiLogoComponent,
+        StatusBarComponent,
+        InputFieldComponent,
+        HotelCategoryContainerBoxComponent,
+        HotelRoomContainerBoxComponent
 
-  ],
+    ],
   imports: [
     CommonModule,
-    ShareRoutingModule
+    ShareRoutingModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class ShareModule { }

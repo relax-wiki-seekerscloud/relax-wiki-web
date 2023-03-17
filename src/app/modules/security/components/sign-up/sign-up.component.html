@@ -1,4 +1,4 @@
-<main>
+<div class="signUpPageContainer">
   <section class="imageAreaSignUp">
     <section class="header">
       <a href=""><h1>RelaxWiki.com</h1></a>
@@ -6,60 +6,96 @@
   </section>
 
   <section class="contentAreaSignUp">
+    <section class="header mobile">
+      <a href=""><h1>RelaxWiki.com</h1></a>
+    </section>
     <section class="body">
       <h1 class="bodyHeading"><b>Sign Up</b></h1>
       <div class="signUpBox">
         <div class="form">
           <form action="">
-
             <div class="form-row">
               <div class="form-group">
-                <!--                <label for="first-name">First Name:</label>-->
-                <h4 class="inputHeader">First Name</h4>
-                <input type="text" class="first-name" name="first-name" placeholder="John">
+                <h4>First Name</h4>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="John">
+                </mat-form-field>
               </div>
-              <div class="form-group">
-                <h4 class="inputHeader">Last Name</h4>
-                <!--                <label for="last-name">Last Name:</label>-->
-                <input type="text" class="last-name" name="last-name" placeholder="John" >
-              </div>
-            </div>
 
-            <div class="form-row">
               <div class="form-group">
-                <h4 class="inputHeader">Email Address</h4>
-                <!--                <label for="email">Email Address:</label>-->
-                <input type="email" class="email" name="email" placeholder="example@gmail.com">
+                <h4>Last Name</h4>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="John">
+                </mat-form-field>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <h4 class="inputHeader">Password</h4>
-                <!--                <label for="password">Password:</label>-->
-                <input type="password" class="password" name="password">
+                <h4>Email Address</h4>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="John@example.com">
+                </mat-form-field>
               </div>
+              <div class="form-group"></div>
+            </div>
+
+            <div class="form-row">
               <div class="form-group">
-                <h4 class="inputHeader">Confirm Password</h4>
-                <!--                <label for="confirm-password">Confirm Password:</label>-->
-                <input type="password" class="confirm-password" name="confirm-password">
+                <h4>Password</h4>
+                <mat-form-field>
+                  <input matInput
+                         [(ngModel)]="password"
+                         [type]="hide ? 'password' : 'text'"
+                         name="password" />
+                  <mat-icon matSuffix
+                            color="primary"
+                            class="eye"
+                            (click)="hide = !hide">
+                    {{ hide ? 'visibility_off' : 'visibility' }}
+                  </mat-icon>
+                </mat-form-field>
+              </div>
+
+              <div class="form-group">
+                <h4>Confirm Password</h4>
+                <mat-form-field>
+                  <input matInput
+                         [(ngModel)]="confirmPassword"
+                         [type]="hide ? 'password' : 'text'"
+                         name="cpassword" />
+                  <mat-icon matSuffix
+                            color="primary"
+                            class="eye"
+                            (click)="hide = !hide">
+                    {{ hide ? 'visibility_off' : 'visibility' }}
+                  </mat-icon>
+                </mat-form-field>
               </div>
 
             </div>
-            <div class="button">
-              <button type="submit">Create an Account</button>
+
+            <div class="signUpButtonContainer">
+              <button mat-flat-button color="primary">Create an Account</button>
             </div>
+
           </form>
         </div>
       </div>
     </section>
     <section class="description">
       <div class="orIcon">
-        <h3>-------OR-------</h3>
+        <div class="orLine"></div><h3>OR</h3><div class="orLine"></div>
+      </div>
+      <div class="signUpExtra">
+        <div class="icon"><img src="../../../../../assets/Images/facebook2.png" alt="facebook signup"></div>
+        <div class="icon"><img src="../../../../../assets/Images/google.png" alt="google signup"></div>
+        <div class="icon"><img src="../../../../../assets/Images/apple.png" alt="apple signup"></div>
       </div>
       <div class="haveAccount">
         <p>Already have an account? <a href="#">Login</a></p>
       </div>
+
       <div class="policy">
         <p>By creating an account, <br>
           You agree with our <a href="">Terms and Conditions</a> and <a href="">Privacy Statements</a></p>
@@ -70,4 +106,6 @@
       <h4>&copy; RelaxWiki.com | All rights reserved</h4>
     </section>
   </section>
-</main>
+</div>
+
+

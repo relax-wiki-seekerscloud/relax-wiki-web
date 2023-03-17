@@ -8,14 +8,17 @@ import { RestaurantRegistrationComponent } from './components/restaurant-registr
 
 
 @NgModule({
-  declarations: [
-    RestaurantManagementComponent,
-    RestaurantDefaultComponent,
-    RestaurantRegistrationComponent
-  ],
-  imports: [
-    CommonModule,
-    RestaurantManagementRoutingModule
-  ]
+    declarations: [
+        RestaurantManagementComponent,
+        RestaurantDefaultComponent,
+        RestaurantRegistrationComponent
+    ],
+    exports: [
+        RestaurantDefaultComponent
+    ],
+    imports: [
+        CommonModule,
+        RestaurantManagementRoutingModule
+    ]
 })
 export class RestaurantManagementModule { }
