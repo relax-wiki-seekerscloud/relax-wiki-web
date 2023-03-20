@@ -20,6 +20,9 @@ import { HotelRoomCountComponent } from './components/hotel-registration/hotel-r
 import { HotelRoomDescriptionComponent } from './components/hotel-registration/hotel-room-description/hotel-room-description.component';
 import {MatRadioModule} from "@angular/material/radio";
 
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatIconModule} from "@angular/material/icon";
+import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-single-view.component';
 
 @NgModule({
     declarations: [
@@ -32,11 +35,14 @@ import {MatRadioModule} from "@angular/material/radio";
         HotelCategoryComponent,
         HotelRoomCountComponent,
         HotelRoomDescriptionComponent,
+        HotelSingleViewComponent,
     ],
     exports: [
         HotelRegistrationComponent,
+        HotelDefaultComponent
 
-    ],
+  ],
+
     imports: [
         CommonModule,
         HotelManagementRoutingModule,
@@ -47,7 +53,9 @@ import {MatRadioModule} from "@angular/material/radio";
         ReactiveFormsModule,
         NgxMatIntlTelInputComponent,
         MatButtonModule,
-        MatRadioModule
+        MatRadioModule,
+        MatCheckboxModule,
+        MatIconModule
 
     ]
 })

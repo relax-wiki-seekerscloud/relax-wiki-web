@@ -12,24 +12,29 @@ import {SecurityModule} from "./modules/security/security.module";
 import {ConsoleModule} from "./modules/console/console.module";
 
 
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ShareModule,
-
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    SecurityModule,
-    ConsoleModule
+    AppComponent,
 
   ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ShareModule,
+
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        SecurityModule,
+        ConsoleModule,
+
+
+    ],
 
   providers: [],
   bootstrap: [AppComponent]
