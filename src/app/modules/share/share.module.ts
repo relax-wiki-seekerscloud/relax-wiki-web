@@ -11,6 +11,13 @@ import { PaymentUserDetailsComponent } from './components/payment-user-details/p
 import { PaymentCardDetailsComponent } from './components/payment-card-details/payment-card-details.component';
 import { PaymentSuccessfulComponent } from './components/payment-successful/payment-successful.component';
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+import { FilterByBudgetComponent } from './components/filter-by-budget/filter-by-budget.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { FilterByRatingComponent } from './components/filter-by-rating/filter-by-rating.component';
+import { HotelSearchSmallComponent } from './components/hotel-search-small/hotel-search-small.component';
+import {FormsModule} from "@angular/forms";
+import { FilterByEntertainmentActivityComponent } from './components/filter-by-entertainment-activity/filter-by-entertainment-activity.component';
+
 import {StatusBarComponent} from "./components/status-bar/status-bar.component";
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -29,6 +36,10 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
     PaymentUserDetailsComponent,
     PaymentCardDetailsComponent,
     PaymentSuccessfulComponent,
+    FilterByBudgetComponent,
+    FilterByRatingComponent,
+    HotelSearchSmallComponent,
+    FilterByEntertainmentActivityComponent,
     FeedbackFormComponent,
     StatusBarComponent,
     InputFieldComponent,
@@ -41,17 +52,24 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
         NavBarComponent,
         NavBarTwoComponent,
         RelaxwikiLogoComponent,
+        FilterByBudgetComponent,
+        FilterByRatingComponent,
+        HotelSearchSmallComponent,
+        FilterByEntertainmentActivityComponent,
         StatusBarComponent,
         InputFieldComponent,
         HotelCategoryContainerBoxComponent,
         HotelRoomContainerBoxComponent
+],
 
-    ],
-  imports: [
-    CommonModule,
-    ShareRoutingModule,
-    MatFormFieldModule,
-    MatInputModule
-  ]
+    imports: [
+        CommonModule,
+        ShareRoutingModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule
+    ]
+
 })
 export class ShareModule { }
