@@ -19,6 +19,8 @@ import { HotelCategoryComponent } from './components/hotel-registration/hotel-ca
 import { HotelRoomCountComponent } from './components/hotel-registration/hotel-room-count/hotel-room-count.component';
 import { HotelRoomDescriptionComponent } from './components/hotel-registration/hotel-room-description/hotel-room-description.component';
 import {MatRadioModule} from "@angular/material/radio";
+import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule } from '@angular/forms';
 
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatIconModule} from "@angular/material/icon";
@@ -39,11 +41,13 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
     ],
     exports: [
         HotelRegistrationComponent,
-        HotelDefaultComponent
+        HotelDefaultComponent,
+        HotelBasicInfoComponent,
 
   ],
 
     imports: [
+
         CommonModule,
         HotelManagementRoutingModule,
         ShareModule,
@@ -53,6 +57,9 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
         ReactiveFormsModule,
         NgxMatIntlTelInputComponent,
         MatButtonModule,
+        MatRadioModule,
+      FormsModule,
+      MatChipsModule,
         MatRadioModule,
         MatCheckboxModule,
         MatIconModule

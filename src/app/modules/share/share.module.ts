@@ -25,6 +25,8 @@ import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
 
+
+
 @NgModule({
   declarations: [
     ShareComponent,
@@ -44,7 +46,8 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
     StatusBarComponent,
     InputFieldComponent,
     HotelCategoryContainerBoxComponent,
-    HotelRoomContainerBoxComponent
+    HotelRoomContainerBoxComponent,
+
   ],
     exports: [
         FooterComponent,
@@ -59,7 +62,9 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
         StatusBarComponent,
         InputFieldComponent,
         HotelCategoryContainerBoxComponent,
-        HotelRoomContainerBoxComponent
+        HotelRoomContainerBoxComponent,
+      FeedbackFormComponent,
+
 ],
 
     imports: [
@@ -69,7 +74,9 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
         FormsModule,
         MatFormFieldModule,
         MatInputModule
-    ]
+    ],
+
+
 
 })
 export class ShareModule { }
