@@ -10,6 +10,12 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {SecurityModule} from "./modules/security/security.module";
 import {ConsoleModule} from "./modules/console/console.module";
+import {HotelManagementModule} from "./modules/console/modules/hotel-management/hotel-management.module";
+import {HotelOwnerProfileModule} from "./modules/console/modules/hotel-management/Modules/hotel-owner-profile/hotel-owner-profile.module";
+
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 
 
@@ -25,16 +31,24 @@ import {ConsoleModule} from "./modules/console/console.module";
         AppRoutingModule,
         BrowserAnimationsModule,
         ShareModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatButtonModule,
+      FormsModule,
+      SecurityModule,
+      ConsoleModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatButtonModule,
+      FormsModule,
+      SecurityModule,
+      ConsoleModule,
+      HotelManagementModule,
+      HotelOwnerProfileModule,
+      MatIconModule,
+      ],
 
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        FormsModule,
-        SecurityModule,
-        ConsoleModule,
 
-
-    ],
 
   providers: [],
   bootstrap: [AppComponent]
