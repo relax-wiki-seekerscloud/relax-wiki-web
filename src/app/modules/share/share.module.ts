@@ -24,6 +24,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
+import { FormSelectionBoxComponent } from './components/form-selection-box/form-selection-box.component';
 
 
 
@@ -48,6 +49,8 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
     HotelCategoryContainerBoxComponent,
     HotelRoomContainerBoxComponent,
 
+    HotelRoomContainerBoxComponent,
+    FormSelectionBoxComponent
   ],
     exports: [
         FooterComponent,
@@ -62,6 +65,8 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
         StatusBarComponent,
         InputFieldComponent,
         HotelCategoryContainerBoxComponent,
+        HotelRoomContainerBoxComponent,
+        FormSelectionBoxComponent,
         HotelRoomContainerBoxComponent,
       FeedbackFormComponent,
 
