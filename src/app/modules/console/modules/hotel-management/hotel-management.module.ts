@@ -13,7 +13,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {ContentBoxBorderComponent} from "../../../share/components/content-box-border/content-box-border.component";
 import {ContentBoxFillComponent} from "../../../share/components/content-box-fill/content-box-fill.component";
 import { ReactiveFormsModule } from '@angular/forms';
-import {NgxMatIntlTelInputComponent} from "ngx-mat-intl-tel-input";
+//import {NgxMatIntlTelInputComponent} from "ngx-mat-intl-tel-input";
 import {MatButtonModule} from "@angular/material/button";
 import { HotelCategoryComponent } from './components/hotel-registration/hotel-category/hotel-category.component';
 import { HotelRoomCountComponent } from './components/hotel-registration/hotel-room-count/hotel-room-count.component';
@@ -41,6 +41,7 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
     ],
     exports: [
         HotelRegistrationComponent,
+        ContentBoxBorderComponent,
         HotelDefaultComponent,
         HotelBasicInfoComponent,
 
@@ -55,7 +56,7 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
         MatInputModule,
         MatSelectModule,
         ReactiveFormsModule,
-        NgxMatIntlTelInputComponent,
+        //NgxMatIntlTelInputComponent,
         MatButtonModule,
         MatRadioModule,
       FormsModule,

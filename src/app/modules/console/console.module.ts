@@ -11,6 +11,10 @@ import { AdvertisementImageComponent } from './components/advertisements/compone
 import { AdvertisementsVideoComponent } from './components/advertisements/components/advertisements-video/advertisements-video.component';
 import { AdvertisementPaymentSuccessfulComponent } from './components/advertisements/components/advertisement-payment-successful/advertisement-payment-successful.component';
 import { AdvertisementPaymentFaildComponent } from './components/advertisements/components/advertisement-payment-faild/advertisement-payment-faild.component';
+import {HotelManagementModule} from "./modules/hotel-management/hotel-management.module";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -30,7 +34,11 @@ import { AdvertisementPaymentFaildComponent } from './components/advertisements/
   imports: [
     CommonModule,
     ConsoleRoutingModule,
-    ShareModule
+    ShareModule,
+    HotelManagementModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class ConsoleModule { }
