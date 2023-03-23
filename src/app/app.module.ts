@@ -14,6 +14,7 @@ import {HotelManagementModule} from "./modules/console/modules/hotel-management/
 import {HotelOwnerProfileModule} from "./modules/console/modules/hotel-management/Modules/hotel-owner-profile/hotel-owner-profile.module";
 
 import { MatIconModule } from '@angular/material/icon';
+import {UserProfileModule} from "./modules/console/modules/daily-process/modules/user-profile/user-profile.module";
 
 
 
@@ -32,22 +33,23 @@ import { MatIconModule } from '@angular/material/icon';
         AppRoutingModule,
         BrowserAnimationsModule,
         ShareModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatButtonModule,
-      FormsModule,
-      SecurityModule,
-      ConsoleModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatButtonModule,
-      FormsModule,
-      SecurityModule,
-      ConsoleModule,
-      HotelManagementModule,
-      HotelOwnerProfileModule,
-      MatIconModule,
-      ],
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        SecurityModule,
+        ConsoleModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        SecurityModule,
+        ConsoleModule,
+        HotelManagementModule,
+        HotelOwnerProfileModule,
+        MatIconModule,
+        UserProfileModule,
+    ],
 
 
 
