@@ -54,6 +54,7 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
     ],
     exports: [
         HotelRegistrationComponent,
+        ContentBoxBorderComponent,
         HotelDefaultComponent,
         HotelBasicInfoComponent,
 
@@ -66,7 +67,7 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
     MatInputModule,
     MatSelectModule,
     ReactiveFormsModule,
-    NgxMatIntlTelInputComponent,
+    //NgxMatIntlTelInputComponent,
     MatButtonModule,
     MatRadioModule,
     MatCheckboxModule,
