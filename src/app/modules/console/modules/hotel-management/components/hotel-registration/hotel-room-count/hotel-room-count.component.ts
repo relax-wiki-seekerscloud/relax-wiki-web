@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HotelListingService} from "../../../../../../share/services/hotel/hotel-listing.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-room-count',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelRoomCountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private hotelListingService: HotelListingService) { }
 
   ngOnInit(): void {
   }
 
+  print(){
+    console.log(this.hotelListingService);
+  }
+  addRooms(){
+    this.router.navigate(['/console/hotel-management/hotel-registration/hotel-room-description']).then();
+  }
 }

@@ -4,14 +4,14 @@
 </div>
 
 <app-content-box-fill>
-  <form action="">
+  <form [formGroup]="roomInformation">
     <div class="room-description-container">
       <div class="container-left">
         <h4>Room type</h4>
         <mat-form-field appearance="fill" class="input-field">
           <mat-label>Select the room type</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let room of rooms" [value]="room.value">
+          <mat-select formControlName="roomType">
+            <mat-option *ngFor="let room of roomTypes" [value]="room.value">
               {{room.viewValue}}
             </mat-option>
           </mat-select>
@@ -21,8 +21,8 @@
         <h4>Room name</h4>
         <mat-form-field appearance="fill" class="input-field room-name">
           <mat-label>e.g. Single room with beach view</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let room of rooms" [value]="room.value">
+          <mat-select formControlName="roomName">
+            <mat-option *ngFor="let room of roomTypes" [value]="room.value">
               {{room.viewValue}}
             </mat-option>
           </mat-select>
@@ -32,14 +32,14 @@
       </div>
       <div class="container-right">
         <div class="container-right-inner-one">
-          <app-input-field name="Room size"></app-input-field>
+          <app-input-field name="Room size" [control]="roomInformation.controls.roomSize"></app-input-field>
           <p>Square meters</p>
         </div>
-        <h4>Room number / Custom room name</h4>
+        <h4>Room name / Custom room name</h4>
         <mat-form-field appearance="fill" class="input-field room-name">
           <mat-label>e.g. Single room with beach view</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let room of rooms" [value]="room.value">
+          <mat-select formControlName="customRoomName">
+            <mat-option *ngFor="let room of roomTypes" [value]="room.value">
               {{room.viewValue}}
             </mat-option>
           </mat-select>
@@ -85,7 +85,7 @@
       <mat-form-field appearance="fill" class="input-field">
         <!--        <mat-label>Select the room type</mat-label>-->
         <mat-select>
-          <mat-option *ngFor="let room of rooms" [value]="room.value">
+          <mat-option *ngFor="let room of roomTypes" [value]="room.value">
             {{room.viewValue}}
           </mat-option>
         </mat-select>
@@ -118,6 +118,6 @@
 
 
 <div class="button-container">
-  <button class="button" color="primary" mat-flat-button>Continue</button>
+  <button class="button" color="primary" mat-flat-button (click)="addRoomInformation()">Continue</button>
 </div>
 

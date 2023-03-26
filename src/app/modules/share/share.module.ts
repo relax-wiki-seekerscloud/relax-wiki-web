@@ -15,7 +15,7 @@ import { FilterByBudgetComponent } from './components/filter-by-budget/filter-by
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { FilterByRatingComponent } from './components/filter-by-rating/filter-by-rating.component';
 import { HotelSearchSmallComponent } from './components/hotel-search-small/hotel-search-small.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FilterByEntertainmentActivityComponent } from './components/filter-by-entertainment-activity/filter-by-entertainment-activity.component';
 
 import {StatusBarComponent} from "./components/status-bar/status-bar.component";
@@ -72,14 +72,15 @@ import { FormSelectionBoxComponent } from './components/form-selection-box/form-
 
 ],
 
-    imports: [
-        CommonModule,
-        ShareRoutingModule,
-        MatCheckboxModule,
-        FormsModule,
-        MatFormFieldModule,
-        MatInputModule
-    ],
+  imports: [
+    CommonModule,
+    ShareRoutingModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
+  ],
 
 
 

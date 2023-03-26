@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RequestHotelListDTO} from "../../dto/classes/hotel/RequestHotelListDTO";
 
 @Component({
   selector: 'app-hotel-room-container-box',
@@ -11,5 +12,7 @@ export class HotelRoomContainerBoxComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  printHello(){
+    console.log(RequestHotelListDTO)
+  }
 }
