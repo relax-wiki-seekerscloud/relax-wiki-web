@@ -24,7 +24,12 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
-
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { BookingSummaryBox1Component } from './components/booking-summary-box1/booking-summary-box1.component';
+import {MatIconModule} from "@angular/material/icon";
+import { BookingSummaryBox2Component } from './components/booking-summary-box2/booking-summary-box2.component';
+import { BookingSummaryBox3Component } from './components/booking-summary-box3/booking-summary-box3.component';
 
 
 @NgModule({
@@ -47,25 +52,37 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
     InputFieldComponent,
     HotelCategoryContainerBoxComponent,
     HotelRoomContainerBoxComponent,
+    PaginatorComponent,
+    HotelRoomContainerBoxComponent,
+    BookingSummaryBox1Component,
+    BookingSummaryBox2Component,
+    BookingSummaryBox3Component
+
 
   ],
-    exports: [
-        FooterComponent,
-        FooterTwoComponent,
-        NavBarComponent,
-        NavBarTwoComponent,
-        RelaxwikiLogoComponent,
-        FilterByBudgetComponent,
-        FilterByRatingComponent,
-        HotelSearchSmallComponent,
-        FilterByEntertainmentActivityComponent,
-        StatusBarComponent,
-        InputFieldComponent,
-        HotelCategoryContainerBoxComponent,
-        HotelRoomContainerBoxComponent,
-      FeedbackFormComponent,
+  exports: [
+    FooterComponent,
+    FooterTwoComponent,
+    NavBarComponent,
+    NavBarTwoComponent,
+    RelaxwikiLogoComponent,
+    FilterByBudgetComponent,
+    FilterByRatingComponent,
+    HotelSearchSmallComponent,
+    FilterByEntertainmentActivityComponent,
+    StatusBarComponent,
+    InputFieldComponent,
+    HotelCategoryContainerBoxComponent,
+    HotelRoomContainerBoxComponent,
+    FeedbackFormComponent,
+    PaginatorComponent,
+    BookingSummaryBox1Component,
+    BookingSummaryBox2Component,
+    BookingSummaryBox3Component
 
-],
+
+  ],
+
 
     imports: [
         CommonModule,
@@ -73,8 +90,11 @@ import { HotelRoomContainerBoxComponent } from './components/hotel-room-containe
         MatCheckboxModule,
         FormsModule,
         MatFormFieldModule,
-        MatInputModule
-    ],
+        MatInputModule,
+        MatPaginatorModule,
+        MatIconModule
+    ]
+
 
 
 
