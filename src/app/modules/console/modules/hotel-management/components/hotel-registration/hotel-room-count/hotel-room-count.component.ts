@@ -20,4 +20,10 @@ export class HotelRoomCountComponent implements OnInit {
   addRooms(){
     this.router.navigate(['/console/hotel-management/hotel-registration/hotel-room-description']).then();
   }
+  get numberOfRooms(){
+    return this.hotelListingService.hotelListDTO?.rooms.length || 0;
+  }
+  get rooms(){
+    return this.hotelListingService.hotelListDTO?.rooms;
+  }
 }

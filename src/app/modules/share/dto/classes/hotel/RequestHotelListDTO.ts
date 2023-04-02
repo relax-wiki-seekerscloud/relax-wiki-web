@@ -17,6 +17,8 @@ export class Bed{
   }
 }
 
+export class HotelBasicInfo{}
+
 export class RequestHotelListDTO {
   public rooms:Array<Room> = [];
   constructor(
