@@ -7,7 +7,9 @@ import {HotelRegistrationComponent} from "./components/hotel-registration/hotel-
 import {HotelCategoryComponent} from "./components/hotel-registration/hotel-category/hotel-category.component";
 import {HotelRoomCountComponent} from "./components/hotel-registration/hotel-room-count/hotel-room-count.component";
 import {HotelRoomDescriptionComponent} from "./components/hotel-registration/hotel-room-description/hotel-room-description.component";
-import {HotelSingleViewComponent} from "./components/hotel-single-view/hotel-single-view.component";
+import {HotelBookingProcessComponent} from "./components/hotel-booking-process/hotel-booking-process.component";
+import {HotelSingleViewComponent} from "./components/hotel-booking-process/hotel-single-view/hotel-single-view.component";
+import {HotelBookingSummaryComponent} from "./components/hotel-booking-process/hotel-booking-summary/hotel-booking-summary.component";
 
 
 const routes: Routes = [
@@ -22,7 +24,15 @@ const routes: Routes = [
       {path: 'hotel-room-description',component:HotelRoomDescriptionComponent},
     ],
   },
-  {path: 'hotel-single-view',component:HotelSingleViewComponent}
+  {path:'hotel-booking-process', component:HotelBookingProcessComponent,
+    children:[
+      {path: 'hotel-single-view',component: HotelSingleViewComponent},
+      {path: 'hotel-booking-summary',component: HotelBookingSummaryComponent},
+    ],
+  },
+
+
+
 ];
 
 
