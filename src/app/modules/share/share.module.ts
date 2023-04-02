@@ -26,6 +26,12 @@ import { HotelCategoryContainerBoxComponent } from './components/hotel-category-
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
 import { FormSelectionBoxComponent } from './components/form-selection-box/form-selection-box.component';
 
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { BookingSummaryBox1Component } from './components/booking-summary-box1/booking-summary-box1.component';
+import {MatIconModule} from "@angular/material/icon";
+import { BookingSummaryBox2Component } from './components/booking-summary-box2/booking-summary-box2.component';
+import { BookingSummaryBox3Component } from './components/booking-summary-box3/booking-summary-box3.component';
 
 
 @NgModule({
@@ -48,8 +54,11 @@ import { FormSelectionBoxComponent } from './components/form-selection-box/form-
     InputFieldComponent,
     HotelCategoryContainerBoxComponent,
     HotelRoomContainerBoxComponent,
-
+    PaginatorComponent,
     HotelRoomContainerBoxComponent,
+    BookingSummaryBox1Component,
+    BookingSummaryBox2Component,
+    BookingSummaryBox3Component,
     FormSelectionBoxComponent
   ],
     exports: [
@@ -69,8 +78,13 @@ import { FormSelectionBoxComponent } from './components/form-selection-box/form-
         FormSelectionBoxComponent,
         HotelRoomContainerBoxComponent,
       FeedbackFormComponent,
+      PaginatorComponent,
+      BookingSummaryBox1Component,
+      BookingSummaryBox2Component,
+      BookingSummaryBox3Component
 
-],
+  ],
+
 
   imports: [
     CommonModule,
@@ -79,7 +93,9 @@ import { FormSelectionBoxComponent } from './components/form-selection-box/form-
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatIconModule
   ],
 
 

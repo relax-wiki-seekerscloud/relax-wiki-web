@@ -31,7 +31,14 @@ import { MatChipsModule } from '@angular/material/chips';
 
 
 import {MatIconModule} from "@angular/material/icon";
-import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-single-view.component';
+import {
+  HotelSingleViewComponent
+} from "./components/hotel-booking-process/hotel-single-view/hotel-single-view.component";
+import {
+  HotelBookingSummaryComponent
+} from "./components/hotel-booking-process/hotel-booking-summary/hotel-booking-summary.component";
+import {HotelBookingProcessComponent} from "./components/hotel-booking-process/hotel-booking-process.component";
+
 
 @NgModule({
     declarations: [
@@ -51,12 +58,16 @@ import { HotelSingleViewComponent } from './components/hotel-single-view/hotel-s
         HotelListingSuccessfulComponent,
         HotelPhotosComponent,
         HotelSingleViewComponent,
+        HotelBookingSummaryComponent,
+        HotelBookingProcessComponent,
+
     ],
     exports: [
         HotelRegistrationComponent,
         ContentBoxBorderComponent,
         HotelDefaultComponent,
         HotelBasicInfoComponent,
+        HotelDefaultComponent,
 
     ],
   imports: [

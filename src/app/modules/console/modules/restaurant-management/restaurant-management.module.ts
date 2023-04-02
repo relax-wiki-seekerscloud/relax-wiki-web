@@ -10,6 +10,9 @@ import {ShareModule} from "../../../share/share.module";
 import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { RestaurantBookingProcessComponent } from './components/restaurant-booking-process/restaurant-booking-process.component';
+import { RestaurantSingleViewComponent } from './components/restaurant-booking-process/restaurant-single-view/restaurant-single-view.component';
+import { RestaurantBookingSummaryComponent } from './components/restaurant-booking-process/restaurant-booking-summary/restaurant-booking-summary.component';
 
 
 
@@ -19,6 +22,9 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         RestaurantDefaultComponent,
         RestaurantRegistrationComponent,
         RestaurantListComponent,
+        RestaurantBookingProcessComponent,
+        RestaurantSingleViewComponent,
+        RestaurantBookingSummaryComponent,
 
 
     ],

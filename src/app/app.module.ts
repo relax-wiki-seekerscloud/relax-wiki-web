@@ -18,11 +18,6 @@ import {UserProfileModule} from "./modules/console/modules/daily-process/modules
 
 
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +44,7 @@ import {UserProfileModule} from "./modules/console/modules/daily-process/modules
         HotelOwnerProfileModule,
         MatIconModule,
         UserProfileModule,
+
     ],
 
 
