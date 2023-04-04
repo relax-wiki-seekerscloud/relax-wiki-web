@@ -8,6 +8,9 @@ const routes: Routes = [{ path: '', component: ShareComponent },
   {path:'feedback-form', component: FeedbackFormComponent},
 ];
 
+const routes: Routes = [{ path: '', component: ShareComponent }, { path: 'chat', loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule) }];
+
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

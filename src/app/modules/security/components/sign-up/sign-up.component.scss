@@ -10,7 +10,10 @@
   min-height: 100vh;
   flex:4;
 }
-
+.passwordError{
+  color: red;
+  text-align: center;
+}
 .contentAreaSignUp{
   flex:5;
 }
@@ -84,6 +87,11 @@
   margin-bottom: 5px;
 }
 
+.error-message{
+  color: red;
+  margin-top: -1.4rem;
+  //text-align: center;
+}
 
 button[type="submit"] {
   padding: 10px 20px;
@@ -180,12 +188,3 @@ button[type="submit"]:hover {
   }
 
 }
-//@media screen and (max-width: 770px){
-//  .form-row{
-//    flex-direction: column;
-//    gap: 0;
-//  }
-//  .signUpBox{
-//    max-width: calc(100% - 3rem);
-//  }
-//}

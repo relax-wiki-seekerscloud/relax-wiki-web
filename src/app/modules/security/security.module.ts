@@ -8,9 +8,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
-
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,14 +22,16 @@ import {MatIconModule} from "@angular/material/icon";
     LoginComponent,
     SignUpComponent
   ],
-  imports: [
-    CommonModule,
-    SecurityRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        SecurityRoutingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ]
 })
 export class SecurityModule { }
