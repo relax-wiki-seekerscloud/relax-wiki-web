@@ -11,6 +11,7 @@ import { PaymentUserDetailsComponent } from './components/payment-user-details/p
 import { PaymentCardDetailsComponent } from './components/payment-card-details/payment-card-details.component';
 import { PaymentSuccessfulComponent } from './components/payment-successful/payment-successful.component';
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 
 @NgModule({
@@ -24,16 +25,18 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
     PaymentUserDetailsComponent,
     PaymentCardDetailsComponent,
     PaymentSuccessfulComponent,
-    FeedbackFormComponent
+    FeedbackFormComponent,
+    ChatComponent
   ],
-  exports: [
-    FooterComponent,
-    FooterTwoComponent,
-    NavBarComponent,
-    NavBarTwoComponent,
-    RelaxwikiLogoComponent,
+    exports: [
+        FooterComponent,
+        FooterTwoComponent,
+        NavBarComponent,
+        NavBarTwoComponent,
+        RelaxwikiLogoComponent,
+        ChatComponent,
 
-  ],
+    ],
   imports: [
     CommonModule,
     ShareRoutingModule
