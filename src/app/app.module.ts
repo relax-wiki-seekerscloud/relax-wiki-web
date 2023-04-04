@@ -38,6 +38,10 @@ import {HotelOwnerProfileModule} from "./modules/console/modules/hotel-managemen
 
 import { MatIconModule } from '@angular/material/icon';
 import {UserProfileModule} from "./modules/console/modules/daily-process/modules/user-profile/user-profile.module";
+import {RestaurantManagementModule} from "./modules/console/modules/restaurant-management/restaurant-management.module";
+import {
+    RestaurantOwnerProfileModule
+} from "./modules/console/modules/restaurant-management/modules/restaurant-owner-profile/restaurant-owner-profile.module";
 
 
 
@@ -67,6 +71,8 @@ import {UserProfileModule} from "./modules/console/modules/daily-process/modules
         HotelOwnerProfileModule,
         MatIconModule,
         UserProfileModule,
+        RestaurantManagementModule,
+        RestaurantOwnerProfileModule,
 
     ],
 

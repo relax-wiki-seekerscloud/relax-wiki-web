@@ -1,6 +1,4 @@
-
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-
 
 
 export interface Chip {
@@ -9,14 +7,13 @@ export interface Chip {
 
 export interface Language extends Chip {}
 
-export interface Service extends Chip {}
+export interface Meals extends Chip {}
 
-export interface Amenity extends Chip {}
+export interface Parking extends Chip {}
 
-export interface Oamenity extends Chip {}
+export interface Atmosphere extends Chip {}
 
-
-
+export interface Additional extends Chip {}
 
 @Component({
   selector: 'app-basic-information',
@@ -24,9 +21,12 @@ export interface Oamenity extends Chip {}
   styleUrls: ['./basic-information.component.scss']
 })
 export class BasicInformationComponent implements OnInit {
-
   @ViewChild('saveButton', { static: false }) saveButton!: ElementRef;
   @ViewChild('cancelButton', { static: false }) cancelButton!: ElementRef;
+
+  constructor() {
+    this.restDescription = '';
+  }
 
   // Display name
 
@@ -217,89 +217,83 @@ export class BasicInformationComponent implements OnInit {
     this.confirmPassword = '';
   }
 
-  //hotel description
+  //rest description
 
-  hotelDescription: string;
-  HotelDescription = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s ' +
+  restDescription: string;
+  RestDescription = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s ' +
     'standard dummy text ever since the 1500s, when an unknown.';
 
-  editModeHotelDescription = false;
+  editModeRestDescription = false;
 
-  toggleEditModeHotelDescription(event: MouseEvent): void {
+  toggleEditModeRestDescription(event: MouseEvent): void {
     event.preventDefault();
-    this.editModeHotelDescription = !this.editModeHotelDescription;
-    if (this.editModeHotelDescription) {
-      this.hotelDescription = this.HotelDescription;
+    this.editModeRestDescription = !this.editModeRestDescription;
+    if (this.editModeRestDescription) {
+      this.restDescription = this.RestDescription;
     }
   }
 
-  onSaveHotelDescription(): void {
-    // Update the hotel description
-    this.HotelDescription = this.hotelDescription;
-    this.hotelDescription = '';
-    this.editModeHotelDescription = false;
+  onSaveRestDescription(): void {
+    // Update the rest description
+    this.RestDescription = this.restDescription;
+    this.restDescription = '';
+    this.editModeRestDescription = false;
   }
 
-  onCancelHotelDescription(): void {
-    // Reset the hotel description to its previous value
-    this.editModeHotelDescription = false;
-    this.hotelDescription = '';
+  onCancelRestDescription(): void {
+    // Reset the rest description to its previous value
+    this.editModeRestDescription = false;
+    this.restDescription = '';
   }
 
-
-//languages
+  //languages
   languages:Language[] = [
     { value: 'English ' },
     { value: 'Sinhala ' },
     { value: 'Tamil ' },
   ];
 
-  //facilities
+  //meals
+  meals:Meals[] = [
+    { value: 'Breakfast ' },
+    { value: 'Lunch ' },
+    { value: 'Dinner ' },
+  ];
+
+  //payment
   chips: Chip[] = [
-    { value: 'Facility 1' },
-    { value: 'Facility 2' },
-    { value: 'Facility 3' },
-    { value: 'Facility 4' },
-    { value: 'Facility 5' },
-    { value: 'Facility 6' },
-    { value: 'Facility 7' },
+    { value: 'Method 1' },
+    { value: 'Method 2' },
+    { value: 'Method 3' },
+    { value: 'Method 4' },
   ];
 
-  //services
-  services: Service[] = [
-    { value: 'Service 1' },
-    { value: 'Service 2' },
-    { value: 'Service 3' },
-    { value: 'Service 4' },
-    { value: 'Service 5' },
-    { value: 'Service 6' },
+  //parking
+  parking: Parking[] = [
+    { value: 'Parking 1' },
+    { value: 'Parking 2' },
+    { value: 'Parking 3' },
+    { value: 'Parking 4' },
   ];
 
-  //common amenities
-  amenities: Amenity[] = [
-    { value: 'Amenity 1' },
-    { value: 'Amenity 2' },
-    { value: 'Amenity 3' },
-    { value: 'Amenity 4' },
-    { value: 'Amenity 5' },
-    { value: 'Amenity 6' },
+  //atmosphere
+  atmosphere: Atmosphere[] = [
+    { value: 'Atmosphere 1' },
+    { value: 'Atmosphere 2' },
+    { value: 'Atmosphere 3' },
+    { value: 'Atmosphere 4' },
   ];
 
-  //other amenities
-  oamenities: Oamenity[] = [
-    { value: 'Amenity 1' },
-    { value: 'Amenity 2' },
-    { value: 'Amenity 3' },
-    { value: 'Amenity 4' },
-    { value: 'Amenity 5' },
-    { value: 'Amenity 6' },
+  //additional
+  additional: Additional[] = [
+    { value: 'Additional 1' },
+    { value: 'Additional 2' },
+    { value: 'Additional 3' },
+    { value: 'Additional 4' },
   ];
 
-
-  constructor() {
-    this.hotelDescription = '';
-  }
 
   ngOnInit(): void {
   }
+
 }

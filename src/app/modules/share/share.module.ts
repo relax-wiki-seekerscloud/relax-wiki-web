@@ -27,12 +27,19 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
+
+import { ChipListComponent } from './components/chip-list/chip-list.component';
+import {MatChipsModule} from "@angular/material/chips";
+import {MatIconModule} from "@angular/material/icon";
+
+
 import { FormSelectionBoxComponent } from './components/form-selection-box/form-selection-box.component';
+
 
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { BookingSummaryBox1Component } from './components/booking-summary-box1/booking-summary-box1.component';
-import {MatIconModule} from "@angular/material/icon";
+
 import { BookingSummaryBox2Component } from './components/booking-summary-box2/booking-summary-box2.component';
 import { BookingSummaryBox3Component } from './components/booking-summary-box3/booking-summary-box3.component';
 
@@ -51,6 +58,18 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     PaymentSuccessfulComponent,
 
     FeedbackFormComponent,
+    StatusBarComponent,
+    InputFieldComponent,
+    HotelCategoryContainerBoxComponent,
+    HotelRoomContainerBoxComponent,
+    PaginatorComponent,
+    HotelRoomContainerBoxComponent,
+    BookingSummaryBox1Component,
+    BookingSummaryBox2Component,
+    BookingSummaryBox3Component,
+
+    ChipListComponent,
+
     ChatComponent
   ],
     exports: [
@@ -76,10 +95,32 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     InputFieldComponent,
     HotelCategoryContainerBoxComponent,
     HotelRoomContainerBoxComponent,
+
+    FeedbackFormComponent,
+    ChipListComponent,
+
+
     PaginatorComponent,
     HotelRoomContainerBoxComponent,
     BookingSummaryBox1Component,
     BookingSummaryBox2Component,
+
+    BookingSummaryBox3Component
+
+  ],
+
+    imports: [
+        CommonModule,
+        ShareRoutingModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatPaginatorModule,
+        MatIconModule,
+      MatChipsModule,
+    ]
+
     BookingSummaryBox3Component,
     FormSelectionBoxComponent
   ],

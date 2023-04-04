@@ -1,19 +1,17 @@
 import { Component, Input, Output, EventEmitter, ViewChild, AfterViewInit } from '@angular/core';
-import { MatChipInputEvent } from '@angular/material/chips';
-import { MatChipList } from '@angular/material/chips';
-import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import {COMMA, ENTER} from "@angular/cdk/keycodes";
+import {MatChipInputEvent, MatChipList} from "@angular/material/chips";
 
 export interface Chip {
   value: string;
   selected?: boolean;
 }
-
 @Component({
-  selector: 'app-hotel-profile-chips',
-  templateUrl: './hotel-profile-chips.component.html',
-  styleUrls: ['./hotel-profile-chips.component.scss']
+  selector: 'app-chip-list',
+  templateUrl: './chip-list.component.html',
+  styleUrls: ['./chip-list.component.scss']
 })
-export class HotelProfileChipsComponent implements AfterViewInit {
+export class ChipListComponent implements AfterViewInit {
 
   @Input() chips: Chip[] = [];
   @Input() color: string = 'primary';

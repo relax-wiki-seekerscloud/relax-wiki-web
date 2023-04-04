@@ -1,5 +1,6 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 
+// Define the interface for PeriodicElement
 export interface PeriodicElement {
   place: string;
   position: number;
@@ -11,19 +12,21 @@ export interface PeriodicElement {
   refundAmount?: string;
 }
 
-
+// Define the interface for PeriodicElementColumn
 interface PeriodicElementColumn {
   columnDef: string;
   header: string;
   cell: (element: PeriodicElement) => string | TemplateRef<any>;
 }
 
+// Define the interface for TemplatePeriodicElementColumn
 interface TemplatePeriodicElementColumn {
   columnDef: string;
   header: string;
   cell: (element: PeriodicElement) => string | TemplateRef<any>;
 }
 
+// Mock data for upcoming, completed, and cancelled bookings
 const MOCK_UPCOMING_BOOKINGS: PeriodicElement[] = [
   { position: 1, place: 'Place name', checkIn: '02-01-2023', checkOut: '05-01-2023', totAmount: '$100'},
   { position: 2, place: 'Place name', checkIn: '02-01-2023', checkOut: '05-01-2023', totAmount: '$100' },
@@ -51,6 +54,8 @@ const MOCK_CANCELLED_BOOKINGS: PeriodicElement[] = [
 })
 
 export class MyBookingsComponent {
+
+  // Function to check if the value is a TemplateRef
   isTemplateRef(value: any): boolean {
     return value instanceof TemplateRef;
   }
@@ -59,12 +64,14 @@ export class MyBookingsComponent {
 
   selectedType: string = 'upcoming';
 
+  // Function to handle navigation link click
   onNavLinkClick(type: string) {
     console.log('Clicked:', type);
     this.selectedType = type;
   }
 
 
+  // Define columns for upcoming and completed bookings
   columns = [
     {
       columnDef: 'position',
@@ -93,6 +100,7 @@ export class MyBookingsComponent {
     },
   ];
 
+  // Define columns for cancelled bookings
   cancelledColumns = [
     {
       columnDef: 'position',
@@ -121,24 +129,20 @@ export class MyBookingsComponent {
     },
   ];
 
-
-
-
-
-
-
+  // Assign mock data to data sources
   dataSource = MOCK_UPCOMING_BOOKINGS;
   dataSourceCompleted = MOCK_COMPLETED_BOOKINGS;
   dataSourceCancelled = MOCK_CANCELLED_BOOKINGS;
 
+  // Define displayed columns for different booking types
   displayedColumns = this.columns.map(c => c.columnDef);
   displayedColumnsCompleted = this.columns.map(c => c.columnDef).concat('review');
   displayedColumnsCancelled = this.cancelledColumns.map(c => c.columnDef);
 
 
-  addReview(element: PeriodicElement) {
+  // Function to handle 'Add Review' button click
+ addReview(element: PeriodicElement) {
     console.log('Add Review clicked for element:', element);
-    // Implement your logic for adding a review here
   }
 
 }

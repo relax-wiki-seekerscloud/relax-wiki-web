@@ -29,7 +29,8 @@ import { RestaurantBookingSummaryComponent } from './components/restaurant-booki
 
     ],
     exports: [
-        RestaurantDefaultComponent
+        RestaurantDefaultComponent,
+        RestaurantListComponent
     ],
   imports: [
     CommonModule,

@@ -1,6 +1,6 @@
 <div class="feedback-main">
   <div class="header">
-    <app-nav-bar-two></app-nav-bar-two>
+<!--    <app-nav-bar-two></app-nav-bar-two>-->
   </div>
   <div class="feedback-main-inner">
 
@@ -9,6 +9,7 @@
     <div class="feedback-main-inner-left">
 
       <!--hotel image and description-->
+
       <div class="hotel">
         <div class="hotel-image">
           <img src="https://www.planetware.com/wpimages/2019/08/south-carolina-best-beach-resorts-ocean-oak-resort-hilton-grand-vacations.jpg" alt="Hotel Image">
@@ -22,18 +23,19 @@
 <!-----feedback form------>
       <div class="feedback-form">
         <h2 class="star-rating">Rate Your Experience <span class="required"> (required)</span></h2>
+
         <div class="stars">
-  <span *ngFor="let star of stars; let i = index" class="star" (click)="onStarClick(i)" [ngClass]="{'selected': i < selectedIndex}">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="icon">
-      <path [attr.fill]="i < selectedIndex ? '#FDCC0D' : 'white'" d="M12 2l3.09 6.26L22 9.27l-4.91 4.78L18.18 22 12 19.25 5.82 22l1.08-8.95L2 9.27l6.91-1.01L12 2z"/>
-      <path fill="none" stroke="#FDCC0D" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-4.91 4.78L18.18 22 12 19.25 5.82 22l1.08-8.95L2 9.27l6.91-1.01L12 2z"/>
-    </svg>
-  </span>
+          <span *ngFor="let star of stars; let i = index" class="star" (click)="onStarClick(i)" [ngClass]="{'selected': i < selectedIndex}">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="icon">
+              <path [attr.fill]="i < selectedIndex ? '#FDCC0D' : 'white'" d="M12 2l3.09 6.26L22 9.27l-4.91 4.78L18.18 22 12 19.25 5.82 22l1.08-8.95L2 9.27l6.91-1.01L12 2z"/>
+              <path fill="none" stroke="#FDCC0D" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-4.91 4.78L18.18 22 12 19.25 5.82 22l1.08-8.95L2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+
+          </span>
+
           <p class="rating-text">{{ratingText}}</p>
         </div><br>
-
-
-
 
         <label>Leave a review <span class="required"> (required)</span></label><br><br>
         <textarea rows="10" cols="146" placeholder="How should this experience be improved "></textarea><br><br>
@@ -60,7 +62,6 @@
         <div class="upload-btn-wrapper">
           <button class="upload-btn" onclick="document.getElementById('file-input').click()">
             <img src="https://icones.pro/wp-content/uploads/2021/02/icono-de-camara-gris.png" alt="camera-icon"><br>
-            <!--            Click here to upload<br>your photo-->
           </button>
           <input type="file" id="file-input" name="myfile" style="display: none" />
         </div>
@@ -72,7 +73,7 @@
         </label>
 
         <label>
-          <button type="submit" class="submit-button">Submit</button>
+          <button type="button" class="submit-button" (click)="onSubmit()">Submit</button>
         </label>
 
       </div>
@@ -88,8 +89,11 @@
         <h2 class="title">Recent reviews of this activity</h2>
         <br>
 
+        <!-- Scrollable container for recent reviews -->
         <div class="recent-reviews-scrollbar">
           <div class="recent-reviews-content">
+
+            <!-- Loop through the reviews and display each review -->
             <div *ngFor="let review of reviews" class="review">
               <div class="profile-image">
                 <img src="https://www.clipartmax.com/png/middle/434-4349876_profile-icon-vector-png.png">
@@ -124,7 +128,7 @@
 
   </div>
   <div class="feedback-footer">
-    <app-footer-two></app-footer-two>
+<!--    <app-footer-two></app-footer-two>-->
   </div>
 </div>
 
