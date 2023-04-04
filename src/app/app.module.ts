@@ -10,6 +10,29 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {SecurityModule} from "./modules/security/security.module";
 import {ConsoleModule} from "./modules/console/console.module";
+
+import {ChatModule} from "./modules/share/modules/chat/chat.module";
+import {MatAutocomplete, MatAutocompleteModule} from '@angular/material/autocomplete'
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ShareModule,
+        MatAutocompleteModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        SecurityModule,
+        ConsoleModule,
+        ChatModule
+
+    ],
+
 import {HotelManagementModule} from "./modules/console/modules/hotel-management/hotel-management.module";
 import {HotelOwnerProfileModule} from "./modules/console/modules/hotel-management/Modules/hotel-owner-profile/hotel-owner-profile.module";
 

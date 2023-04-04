@@ -11,6 +11,9 @@ import { PaymentUserDetailsComponent } from './components/payment-user-details/p
 import { PaymentCardDetailsComponent } from './components/payment-card-details/payment-card-details.component';
 import { PaymentSuccessfulComponent } from './components/payment-successful/payment-successful.component';
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+
+import { ChatComponent } from './components/chat/chat.component';
+
 import { FilterByBudgetComponent } from './components/filter-by-budget/filter-by-budget.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { FilterByRatingComponent } from './components/filter-by-rating/filter-by-rating.component';
@@ -32,6 +35,7 @@ import { BookingSummaryBox2Component } from './components/booking-summary-box2/b
 import { BookingSummaryBox3Component } from './components/booking-summary-box3/booking-summary-box3.component';
 
 
+
 @NgModule({
   declarations: [
     ShareComponent,
@@ -43,6 +47,24 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     PaymentUserDetailsComponent,
     PaymentCardDetailsComponent,
     PaymentSuccessfulComponent,
+
+    FeedbackFormComponent,
+    ChatComponent
+  ],
+    exports: [
+        FooterComponent,
+        FooterTwoComponent,
+        NavBarComponent,
+        NavBarTwoComponent,
+        RelaxwikiLogoComponent,
+        ChatComponent,
+
+    ],
+  imports: [
+    CommonModule,
+    ShareRoutingModule
+  ]
+
     FilterByBudgetComponent,
     FilterByRatingComponent,
     HotelSearchSmallComponent,
@@ -94,6 +116,7 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
         MatPaginatorModule,
         MatIconModule
     ]
+
 
 
 

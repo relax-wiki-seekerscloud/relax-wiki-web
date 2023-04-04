@@ -1,0 +1,89 @@
+.chat-background{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.chat-main-wrap{
+  //border: 1px solid red;
+  height: 600px;
+  width:950px ;
+}
+.chat-content-main-wrap{
+  height: 550px;
+  width: 100%;
+  //border: 1px solid red;
+  display: flex;
+}
+.chat-content-left{
+  height: 100%;
+  width: 350px;
+  background-color: rgba(235, 237, 239, 1);
+}
+.chat-content-right{
+  //border: 1px solid red;
+  height: 100%;
+  width: 650px;
+  background-color:white;
+}
+.chat-top-bar-wrap{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(26, 34, 56, 1);
+  display: flex;
+  padding:0px 20px;
+}
+.project-name-wrap{
+  width: 100%;
+  height: 30px;
+  //border: 1px solid red;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.project-name{
+  //border: 1px solid red;
+  width: 370px;
+  height: 100%;
+}
+.project-name p{
+  color: white;
+  margin-left: 10px;
+  margin-top: 3px;
+  font-size: large;
+}
+.cancel-button{
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-color: white;
+  opacity: 0.2;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.cancel-button img{
+  height: 10px;
+  width: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+//.chat-search-wrap{
+//  border: 1px solid red;
+//  width: 100%;
+//  //margin-top: 20px;
+//  padding-top: 10px;
+//  border-bottom:1px solid rgba(235, 237, 239, 1) ;
+//
+//}
+//.search-chats-input{
+//  padding-left: 20px;
+//  padding-right:20px ;
+//  width: 100%;
+//  border-radius: 6px;
+//}
+//
+
