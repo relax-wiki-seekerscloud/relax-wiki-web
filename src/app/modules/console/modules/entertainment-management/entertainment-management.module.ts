@@ -5,6 +5,11 @@ import { EntertainmentManagementRoutingModule } from './entertainment-management
 import { EntertainmentManagementComponent } from './entertainment-management.component';
 import { EntertainmentDefaultComponent } from './components/entertainment-default/entertainment-default.component';
 import { EntertainmentRegistrationComponent } from './components/entertainment-registration/entertainment-registration.component';
+import {FormsModule} from "@angular/forms";
+import {ShareModule} from "../../../share/share.module";
+import { EntertainmentListComponent } from './components/entertainment-list/entertainment-list.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -12,11 +17,19 @@ import { EntertainmentRegistrationComponent } from './components/entertainment-r
     EntertainmentManagementComponent,
     EntertainmentDefaultComponent,
     EntertainmentRegistrationComponent,
+    EntertainmentListComponent,
 
+  ],
+  exports: [
+    EntertainmentDefaultComponent
   ],
   imports: [
     CommonModule,
-    EntertainmentManagementRoutingModule
+    EntertainmentManagementRoutingModule,
+    FormsModule,
+    ShareModule,
+    MatCheckboxModule,
+    MatIconModule
   ]
 })
 export class EntertainmentManagementModule { }

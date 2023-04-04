@@ -22,6 +22,9 @@
     "@angular/router": "^14.2.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.3",
+    "libphonenumber-js": "^1.10.21",
+    "ngx-bootstrap": "^0.0.1",
+    "ngx-mat-intl-tel-input": "^5.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

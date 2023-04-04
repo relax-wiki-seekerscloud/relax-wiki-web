@@ -11,6 +11,7 @@ import { AdvertisementImageComponent } from './components/advertisements/compone
 import { AdvertisementsVideoComponent } from './components/advertisements/components/advertisements-video/advertisements-video.component';
 import { AdvertisementPaymentSuccessfulComponent } from './components/advertisements/components/advertisement-payment-successful/advertisement-payment-successful.component';
 import { AdvertisementPaymentFaildComponent } from './components/advertisements/components/advertisement-payment-faild/advertisement-payment-faild.component';
+
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatButtonModule} from "@angular/material/button";
@@ -19,6 +20,13 @@ import {MatSelectModule} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
 import { OffersComponent } from './components/offers/offers.component';
 import {MatMenuModule} from "@angular/material/menu";
+
+import {HotelManagementModule} from "./modules/hotel-management/hotel-management.module";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+
+
 
 @NgModule({
   declarations: [
@@ -36,6 +44,7 @@ import {MatMenuModule} from "@angular/material/menu";
   exports: [
     AdvertisementsComponent
   ],
+
     imports: [
         CommonModule,
         ConsoleRoutingModule,
@@ -49,5 +58,16 @@ import {MatMenuModule} from "@angular/material/menu";
         MatMenuModule
 
     ]
+
+  imports: [
+    CommonModule,
+    ConsoleRoutingModule,
+    ShareModule,
+    HotelManagementModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
+  ]
+
 })
 export class ConsoleModule { }

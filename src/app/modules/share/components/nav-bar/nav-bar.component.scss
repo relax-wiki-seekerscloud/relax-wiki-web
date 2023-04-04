@@ -8,13 +8,15 @@
 
 .nav-bar{
   width: 100%;
-  height: 140px;
-  position: absolute;
+  //height: 140px;
+  //position: absolute;
   background-color: rgba(26, 34, 56, 1);
+  padding:2rem 0;
 }
+
 .nav-bar-inner-top{
   height: 40px;
-  margin-top: 20px;
+  //margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
