@@ -9,7 +9,7 @@ import { SalesInformationComponent } from './sales-information/sales-information
 
 
 import { HotelProfileNavbarComponent } from './hotel-profile-navbar/hotel-profile-navbar.component';
-import { HotelProfileChipsComponent } from './basic-information/hotel-profile-chips/hotel-profile-chips.component';
+
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatIconModule} from "@angular/material/icon";
@@ -26,13 +26,13 @@ import {ShareModule} from "../../../../../share/share.module";
 
 
     HotelProfileNavbarComponent,
-    HotelProfileChipsComponent,
+
 
 
   ],
   exports: [
     HotelOwnerProfileComponent,
-    HotelProfileChipsComponent
+
   ],
   imports: [
     CommonModule,

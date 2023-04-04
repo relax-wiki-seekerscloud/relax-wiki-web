@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
+import {Component, NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShareComponent } from './share.component';
 
-const routes: Routes = [{ path: '', component: ShareComponent }];
+import {FeedbackFormComponent} from "./components/feedback-form/feedback-form.component";
+
+const routes: Routes = [{ path: '', component: ShareComponent },
+  {path:'feedback-form', component: FeedbackFormComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

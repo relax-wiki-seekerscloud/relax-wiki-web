@@ -24,10 +24,15 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
+import { ChipListComponent } from './components/chip-list/chip-list.component';
+import {MatChipsModule} from "@angular/material/chips";
+import {MatIconModule} from "@angular/material/icon";
+
+
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { BookingSummaryBox1Component } from './components/booking-summary-box1/booking-summary-box1.component';
-import {MatIconModule} from "@angular/material/icon";
+
 import { BookingSummaryBox2Component } from './components/booking-summary-box2/booking-summary-box2.component';
 import { BookingSummaryBox3Component } from './components/booking-summary-box3/booking-summary-box3.component';
 
@@ -56,7 +61,9 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     HotelRoomContainerBoxComponent,
     BookingSummaryBox1Component,
     BookingSummaryBox2Component,
-    BookingSummaryBox3Component
+    BookingSummaryBox3Component,
+
+    ChipListComponent,
 
 
   ],
@@ -75,14 +82,13 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     HotelCategoryContainerBoxComponent,
     HotelRoomContainerBoxComponent,
     FeedbackFormComponent,
+    ChipListComponent,
     PaginatorComponent,
     BookingSummaryBox1Component,
     BookingSummaryBox2Component,
     BookingSummaryBox3Component
 
-
   ],
-
 
     imports: [
         CommonModule,
@@ -92,9 +98,9 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
         MatFormFieldModule,
         MatInputModule,
         MatPaginatorModule,
-        MatIconModule
+        MatIconModule,
+      MatChipsModule,
     ]
-
 
 
 

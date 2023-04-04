@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PersonalDetailsComponent  {
 
+  // Define properties for user's personal details
   [key: string]: any;
 
   firstName: string = 'John';
@@ -24,8 +25,6 @@ export class PersonalDetailsComponent  {
     year: '0000',
   };
 
-
-
   gender: string = 'Add gender';
 
   address: string = "";
@@ -33,15 +32,17 @@ export class PersonalDetailsComponent  {
   regionCountry: string = "";
 
 
+  oldPassword: string = '';
+  newPassword: string = '';
+  confirmPassword: string = '';
 
-
-
-
+  // Define a method to get the value of a field
   getField(field: string): any {
     const parts = field.split('.');
     return parts.length === 2 ? this[parts[0]][parts[1]] : this[field];
   }
 
+  // Define a method to set the value of a field
   setField(field: string, value: any): void {
     const parts = field.split('.');
     if (parts.length === 2) {
@@ -51,173 +52,256 @@ export class PersonalDetailsComponent  {
     }
   }
 
-
+  // Define an array of field objects for the form
   fields: any[] = [
     {
       title: 'Name',
       content: () => `${this.firstName} ${this.lastName}`,
       isEditing: false,
-      inputModel1: 'firstName',
-      inputLabel1: 'First Name',
-      inputType1: 'text',
-      inputModel2: 'lastName',
-      inputLabel2: 'Last Name',
-      inputType2: 'text',
-      inputWrapperClass: 'name-inputs-wrapper', // Add this line
+      inputWrapperClass: 'name-inputs-wrapper',
+      inputFields: [
+        {
+          label: 'First Name',
+          model: 'firstName',
+          type: 'text'
+        },
+        {
+          label: 'Last Name',
+          model: 'lastName',
+          type: 'text'
+        }
+      ]
     },
+
     {
       title: 'Display Name',
       content: () => this.displayName,
       isEditing: false,
-      inputModel1: 'displayName',
-      inputLabel1: 'Display Name',
-      inputType1: 'text',
+      inputFields: [
+        {
+          label: 'Display Name',
+          model: 'displayName',
+          type: 'text'
+        }
+      ]
     },
+
     {
       title: 'Email Address',
       content: () => this.emailAddress,
       isEditing: false,
-      inputModel1: 'emailAddress',
-      inputLabel1: 'Email Address',
-      inputType1: 'text',
+      inputFields: [
+        {
+          label: 'Email Address',
+          model: 'emailAddress',
+          type: 'text'
+        }
+      ]
     },
 
     {
-
       title: 'Phone Number',
       content: () => this.isPhoneFieldEmpty ? 'Add your phone number' : this.phoneNumber,
       isEditing: false,
-
-      inputModel2: 'phoneNumber',
-      inputLabel2: 'Phone Number',
-      inputType2: 'text',
+      inputFields: [
+        {
+          label: 'Phone Number',
+          model: 'phoneNumber',
+          type: 'text'
+        }
+      ]
     },
 
     {
       title: 'Date of Birth',
-      content: () => this.dateOfBirth.year === '0000' ? 'Add your Birthday' : `${this.dateOfBirth.year}-${this.getMonthName(this.dateOfBirth.month)}-${this.dateOfBirth.day}`,
+      content: () => this.dateOfBirth.year === '0000' ? 'Add your Birthday' : `${this.dateOfBirth.year}-${this['getMonthName'](this.dateOfBirth.month)}-${this.dateOfBirth.day}`,
       isEditing: false,
-      inputModel1: 'dateOfBirth.day',
-      inputLabel1: 'Day',
-      inputType1: 'number',
-      inputModel2: 'dateOfBirth.month',
-      inputLabel2: 'Month',
-      inputType2: 'select',
-      inputModel3: 'dateOfBirth.year',
-      inputLabel3: 'Year',
-      inputType3: 'select',
+      inputFields: [
+        {
+          label: 'Day',
+          model: 'dateOfBirth.day',
+          type: 'number'
+        },
+        {
+          label: 'Month',
+          model: 'dateOfBirth.month',
+          type: 'select',
+          options: this['getMonthOptions']()
+        },
+        {
+          label: 'Year',
+          model: 'dateOfBirth.year',
+          type: 'select',
+          options: this['getYearRange'](1900, 2023)
+        }
+      ]
     },
-
 
     {
       title: 'Gender',
       content: () => this.gender,
       isEditing: false,
-      inputModel1: 'gender',
-      inputLabel1: 'Gender',
-      inputType1: 'select',
+      inputFields: [
+        {
+          label: 'Gender',
+          model: 'gender',
+          type: 'select',
+          options: this['getGenderOptions']()
+        }
+      ]
     },
 
     {
       title: 'Address',
       content: () => this.address === "" && this.townCity === "" && this.regionCountry === "" ? 'Add your address' : `${this.address} ${this.townCity} ${this.regionCountry}`,
       isEditing: false,
-      inputModel1: 'address',
-      inputLabel1: 'Address',
-      inputType1: 'text',
-      inputModel2: 'townCity',
-      inputLabel2: 'Town/City',
-      inputType2: 'text',
-      inputModel3: 'regionCountry',
-      inputLabel3: 'Region/Country',
-      inputType3: 'select',
+      inputFields: [
+        {
+          label: 'Address',
+          model: 'address',
+          type: 'text'
+        },
+        {
+          label: 'Town/City',
+          model: 'townCity',
+          type: 'text'
+        },
+        {
+          label: 'Region/Country',
+          model: 'regionCountry',
+          type: 'select',
+          options: this['getCountries']()
+        }
+      ]
+    },
+
+
+    {
+      title: 'Password',
+      content: () => '******',
+      isEditing: false,
+      inputFields: [
+        {
+          label: 'Old Password',
+          model: 'oldPassword',
+          type: 'password'
+        },
+        {
+          label: 'New Password',
+          model: 'newPassword',
+          type: 'password'
+        },
+
+        {
+          label: 'Confirm Password',
+          model: 'confirmPassword',
+          type: 'password'
+        },
+
+      ]
     }
 
-
-    // Add other fields (email address, phone number, date of birth) here with the same structure
-  ];
-
-  getMonthName(index: string): string {
-    const monthNames = [
-      'January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'
     ];
-    return monthNames[parseInt(index, 10) - 1];
-  }
 
+  // Define a method to get month options for the date of birth field
+      getMonthOptions(): { value: string; name: string }[] {
+        const monthNames = [
+          'January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        return monthNames.map((name, index) => ({value: (index + 1).toString(), name}));
+      }
+  // Define a method to get the month name for the date of birth field
+      getMonthName(index: string): string {
+        const monthNames = [
+          'January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        return monthNames[parseInt(index, 10) - 1];
+      }
+
+  // Define a method to get a range of years for the date of birth field
   getYearRange(start: number, end: number): number[] {
-    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-  }
+        return Array.from({length: end - start + 1}, (_, i) => start + i);
+      }
+
+  // Define a method to get gender options for the gender field
   getGenderOptions(): string[] {
-    return ['Female', 'Male', 'Other'];
-  }
-  getCountries(): string[] {
+        return ['Female', 'Male', 'Other'];
+      }
+
+  // Define a method to get a list of countries for the address field
+  getCountries(): { value: string; name: string }[] {
     return [
-      'United States',
-      'Canada',
-      'United Kingdom',
-      'Sri Lanka',
+      { value: 'US', name: 'United States' },
+      { value: 'CA', name: 'Canada' },
+      { value: 'UK', name: 'United Kingdom' },
+      { value: 'LK', name: 'Sri Lanka' },
     ];
   }
 
 
-
+  // Define a method to enable the editing mode for a field
   enableEdit(field: any) {
-    if (field.title === 'Phone Number' && this.isPhoneFieldEmpty) {
-      this.isPhoneFieldEmpty = false;
-      this.phoneNumber = '';
-    }
-    field.isEditing = true;
-  }
+        if (field.title === 'Phone Number' && this.isPhoneFieldEmpty) {
+          this.isPhoneFieldEmpty = false;
+          this.phoneNumber = '';
+        }
+        field.isEditing = true;
+      }
 
-  sendCode(field: any) {
-    if (field.title === 'Phone Number' && !this.isPhoneFieldEmpty) {
-      // Implement logic to send the code to the user's mobile phone
-      console.log('Sending code to:', this.phoneNumber);
-    }
-  }
+      save(field: any) {
+        field.isEditing = false;
+      }
 
-  save(field: any) {
-    field.isEditing = false;
-  }
+      cancel(field: any) {
+        field.isEditing = false;
+      }
 
-  cancel(field: any) {
-    field.isEditing = false;
-  }
-  onMouseOver(field: any) {
-    field.isHovered = true;
-  }
+  // Define a method to handle mouse over events for a field
+      onMouseOver(field: any) {
+        field.isHovered = true;
+      }
 
-  onMouseOut(field: any) {
-    field.isHovered = false;
-  }
+  // Define a method to handle mouse out events for a field
+      onMouseOut(field: any) {
+        field.isHovered = false;
+      }
 
-  profileImageUrl?: string;
+      profileImageUrl? : string;
 
 
-  constructor() {
-    this.profileImageUrl = 'https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png';
-  }
-  isProfileImageHovered: boolean = false;
+      constructor() {
+        this.profileImageUrl = 'https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png';
+      }
 
-  onProfileImageMouseEnter() {
-    this.isProfileImageHovered = true;
-  }
+      isProfileImageHovered: boolean = false;
 
-  onProfileImageMouseLeave() {
-    this.isProfileImageHovered = false;
-  }
-  addProfileImage(profileImageInput: HTMLInputElement) {
-    profileImageInput.click();
-  }
+  // Define a method to handle the mouse enter event on the profile image
+      onProfileImageMouseEnter() {
+        this.isProfileImageHovered = true;
+      }
 
-  handleProfileImageChange(event: Event) {
-    const fileInput = event.target as HTMLInputElement;
-    if (fileInput.files && fileInput.files.length > 0) {
-      const file = fileInput.files[0];
-      // Implement logic to upload the image to the server
-    }
-  }
+
+  // handle the mouse leave event on the profile image
+      onProfileImageMouseLeave() {
+        this.isProfileImageHovered = false;
+      }
+
+  // Define a method to trigger the file input element for profile image upload
+      addProfileImage(profileImageInput: HTMLInputElement) {
+        profileImageInput.click();
+      }
+
+      handleProfileImageChange(event: Event) {
+        const fileInput = event.target as HTMLInputElement;
+        if (fileInput.files && fileInput.files.length > 0) {     // Check if a file has been selected
+          const file = fileInput.files[0];
+
+        }
+      }
+
 
 
 }
+

@@ -1,32 +1,28 @@
-
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-
-
-
+import { Component, ElementRef, ViewChild } from '@angular/core';
 export interface Chip {
   value: string;
 }
 
 export interface Language extends Chip {}
 
-export interface Service extends Chip {}
+export interface Meals extends Chip {}
 
-export interface Amenity extends Chip {}
+export interface Transport extends Chip {}
 
-export interface Oamenity extends Chip {}
-
-
-
+export interface Payment extends Chip {}
 
 @Component({
   selector: 'app-basic-information',
   templateUrl: './basic-information.component.html',
   styleUrls: ['./basic-information.component.scss']
 })
-export class BasicInformationComponent implements OnInit {
-
+export class BasicInformationComponent{
   @ViewChild('saveButton', { static: false }) saveButton!: ElementRef;
   @ViewChild('cancelButton', { static: false }) cancelButton!: ElementRef;
+
+  constructor() {
+    this.activityDescription = '';
+  }
 
   // Display name
 
@@ -179,13 +175,12 @@ export class BasicInformationComponent implements OnInit {
   }
 
   // password
-  // Add the following properties
+
   editModePassword = false;
   oldPassword = '';
   newPassword = '';
   confirmPassword = '';
 
-// Add the following methods
   toggleEditModePassword(event: Event) {
     event.preventDefault();
     this.editModePassword = !this.editModePassword;
@@ -217,89 +212,95 @@ export class BasicInformationComponent implements OnInit {
     this.confirmPassword = '';
   }
 
-  //hotel description
+  //activity description
 
-  hotelDescription: string;
-  HotelDescription = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s ' +
+   activityDescription: string;
+  ActivityDescription = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s ' +
     'standard dummy text ever since the 1500s, when an unknown.';
 
-  editModeHotelDescription = false;
+  editModeActivityDescription = false;
 
-  toggleEditModeHotelDescription(event: MouseEvent): void {
+  toggleEditModeActivityDescription(event: MouseEvent): void {
     event.preventDefault();
-    this.editModeHotelDescription = !this.editModeHotelDescription;
-    if (this.editModeHotelDescription) {
-      this.hotelDescription = this.HotelDescription;
+    this.editModeActivityDescription = !this.editModeActivityDescription;
+    if (this.editModeActivityDescription) {
+      this.activityDescription = this.ActivityDescription;
     }
   }
 
-  onSaveHotelDescription(): void {
-    // Update the hotel description
-    this.HotelDescription = this.hotelDescription;
-    this.hotelDescription = '';
-    this.editModeHotelDescription = false;
+  onSaveActivityDescription(): void {
+    // Update the activiity description
+    this.ActivityDescription = this.activityDescription;
+    this.activityDescription = '';
+    this.editModeActivityDescription = false;
   }
 
-  onCancelHotelDescription(): void {
-    // Reset the hotel description to its previous value
-    this.editModeHotelDescription = false;
-    this.hotelDescription = '';
+  onCancelActivityDescription(): void {
+    // Reset the activity description to its previous value
+    this.editModeActivityDescription = false;
+    this.activityDescription = '';
   }
 
-
-//languages
+  //languages
   languages:Language[] = [
     { value: 'English ' },
     { value: 'Sinhala ' },
     { value: 'Tamil ' },
   ];
 
-  //facilities
-  chips: Chip[] = [
-    { value: 'Facility 1' },
-    { value: 'Facility 2' },
-    { value: 'Facility 3' },
-    { value: 'Facility 4' },
-    { value: 'Facility 5' },
-    { value: 'Facility 6' },
-    { value: 'Facility 7' },
+  //meals
+  meals:Meals[] = [
+    { value: 'Breakfast ' },
+    { value: 'Lunch ' },
+    { value: 'Dinner ' },
   ];
 
-  //services
-  services: Service[] = [
+  //payment
+  chips: Chip[] = [
     { value: 'Service 1' },
     { value: 'Service 2' },
     { value: 'Service 3' },
     { value: 'Service 4' },
-    { value: 'Service 5' },
-    { value: 'Service 6' },
-  ];
-
-  //common amenities
-  amenities: Amenity[] = [
-    { value: 'Amenity 1' },
-    { value: 'Amenity 2' },
-    { value: 'Amenity 3' },
-    { value: 'Amenity 4' },
-    { value: 'Amenity 5' },
-    { value: 'Amenity 6' },
-  ];
-
-  //other amenities
-  oamenities: Oamenity[] = [
-    { value: 'Amenity 1' },
-    { value: 'Amenity 2' },
-    { value: 'Amenity 3' },
-    { value: 'Amenity 4' },
-    { value: 'Amenity 5' },
-    { value: 'Amenity 6' },
   ];
 
 
-  constructor() {
-    this.hotelDescription = '';
+  //atmosphere
+  transport: Transport[] = [
+    { value: 'Method 1' },
+    { value: 'Method 2' },
+    { value: 'Method 3' },
+    { value: 'Method 4' },
+  ];
+
+  //additional
+  payment: Payment[] = [
+    { value: 'Method 1' },
+    { value: 'Method 2' },
+    { value: 'Method 3' },
+    { value: 'Method 4' },
+  ];
+
+  // rate
+
+  editModeRate = false;
+  Rate = '$20';
+
+  toggleEditModeRate(event: Event) {
+    event.preventDefault();
+    this.editModeRate = !this.editModeRate;
+  }
+
+  onSaveRate() {
+    this.editModeRate = false;
+    console.log('Saved:', this.Rate);
+  }
+
+  onCancelRate() {
+    this.editModeRate = false;
+    this.Rate = this.Rate;
   }
 
   ngOnInit(): void {
   }
+
 }

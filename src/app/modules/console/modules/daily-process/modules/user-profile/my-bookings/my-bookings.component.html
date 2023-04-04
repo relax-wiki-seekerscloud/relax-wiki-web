@@ -1,6 +1,8 @@
 <div class="my-bookings-main">
   <app-user-profile-nav-bar></app-user-profile-nav-bar>
   <div class="my-bookings-content">
+
+    <!-- Side navigation container -->
     <mat-sidenav-container class="example-container">
       <mat-sidenav #sidenav mode="side" opened>
         <mat-nav-list>
@@ -15,6 +17,8 @@
           </mat-list-item>
         </mat-nav-list>
       </mat-sidenav>
+
+      <!-- Content area for the bookings -->
       <mat-sidenav-content [style.margin-left.px]="sidenav.opened ? 250 : 0">
 
         <!-- upcoming bookings -->

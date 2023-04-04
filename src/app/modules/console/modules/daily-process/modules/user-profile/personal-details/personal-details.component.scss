@@ -17,13 +17,11 @@
 }
 
 .personal-details{
-
   margin-left: 300px;
   margin-right: 300px;
   margin-top: 20px;
   margin-bottom: 50px;
   background-color: #f8f8f8;
-
 }
 
 .field {
@@ -60,7 +58,7 @@
 }
 
 
-input[type=text], select{
+input[type=text], select, input[type=password]{
   width: 300px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -70,14 +68,13 @@ input[type=text], select{
 }
 .input-container {
   display: flex;
-  flex-direction: column; /* Change to 'column' */
+  flex-direction: column;
 }
 
 .input-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
-  /* Add this property to add space between the input fields */
   gap: 10px;
 }
 

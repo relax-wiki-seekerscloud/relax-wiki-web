@@ -1,27 +1,24 @@
-<app-hotel-profile-navbar></app-hotel-profile-navbar>
+<app-activity-navbar></app-activity-navbar>
+
 <div class="basic-information-main">
+  <div class="activity-name">Activity Name</div>
 
-  <div class="hotel-name">Hotel Name</div>
-
-  <div class="hotel-images">
-
-    <div class="hotel-main-image">
-      <img src="https://media-cdn.tripadvisor.com/media/photo-s/24/48/ac/e4/aerial-view.jpg" alt="main-image">
+  <div class="activity-images">
+    <div class="activity-main-image">
+      <img src="https://checkyeti.imgix.net/images/optimized/hossegor-surf-center-hero1.jpg" alt="main-image">
     </div>
 
     <div class="other-images">
-      <img src="https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4_LdSl7Vy5mE8f_a1EqIWlccpk5HsceAnfFYH_OV7YCYtqUTWC68IxKrlN8ikBRgU5c&usqp=CAU" alt="">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8&w=1000&q=80" alt="">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPB67c_KaGySAje9dJXdCcsfPFZ5fJWslhb7uL0L0Rk0eoOIIo6GVpo6jx2NaBwWmVB3w&usqp=CAU" alt="">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYc9bj8sf_9Ho4sBimEw-gOvDwNjrBcDZiSw&usqp=CAU" alt="">
-      <img src="https://i.pinimg.com/originals/e7/1f/be/e71fbe3b0a9f786cbdaf4804aa7a3ed5.jpg" alt="">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5S1OpSjiWtDzFV4SI9VgnXd6L4xizhh3lQ&usqp=CAU" alt="">
-      <img src="https://media.cntraveler.com/photos/53dad07e6dec627b14a04855/master/w_320%2Cc_limit/four-seasons-bali-at-jimbaran-bay-bali-jimbaran-indonesia-108728-2.jpg" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15927/private-surfing-lessons-plage-des-culs-nus-all-levels-hossegor-surf-center9?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/11493/private-surf-lessons-from-6-y-on-graviere-beach-in-hossegor-with-escf-hossegor-darrigood-surf-school-5?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15926/surfing-lessons-plage-des-culs-nus-all-levels-hossegor-surf-center-hero.jpg?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15925/surfing-lessons-for-kids-6-11-years-plage-des-culs-nus-hossegor-surf-center-hero.jpg?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15925/surfing-lessons-for-kids-6-11-years-plage-des-culs-nus-hossegor-surf-center5?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15925/surfing-lessons-for-kids-6-11-years-plage-des-culs-nus-hossegor-surf-center7?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15925/surfing-lessons-for-kids-6-11-years-plage-des-culs-nus-hossegor-surf-center-cover?auto=format,compress&dpr=1&q=45" alt="">
+      <img src="https://checkyeti.imgix.net/images/prod/products/15925/surfing-lessons-for-kids-6-11-years-plage-des-culs-nus-hossegor-surf-center6?auto=format,compress&dpr=1&q=45" alt="">
     </div>
   </div>
-
-
 
   <div class="main-image-label-box">
     <div class="main-image-label">
@@ -32,39 +29,35 @@
     </div>
   </div>
 
-  <div class="hotel-details">
-    <p class="hotel-details-title"> Hotel Details</p><br>
+  <div class="activity-details">
+    <p class="activity-details-title"> Activity Details</p><br>
 
-    <!--------------display name------------->
+    <!--display name-->
+
     <div class="display-name">
       <div class="display-name-title">
         <p>Display Name</p>
       </div>
 
       <div class="display-name-content" (focusout)="onFocusOutDisplayName($event)">
-
-        <!-- Edit Mode for Display Name -->
         <ng-container *ngIf="editModeDisplayName; else displayModeDisplayName">
           <input #displayNameInput type="text" [(ngModel)]="DisplayName">
 
           <button #saveButton class="save" (mousedown)="onSaveDisplayName()">Save</button>
           <button #cancelButton class="cancel" (mousedown)="onCancelDisplayName()">Cancel</button>
         </ng-container>
-
-        <!-- Display Mode for Display Name -->
         <ng-template #displayModeDisplayName>
           <p>{{ DisplayName }}</p>
         </ng-template>
       </div>
 
-      <!-- Edit Link for Display Name -->
       <div class="edit-link">
         <a href="#" (click)="toggleEditModeDisplayName($event)">Edit</a>
       </div>
     </div>
 
-    <!----------address---------->
-    <div class="address">
+<!--address-->
+     <div class="address">
       <div class="address-title">
         <p>Address</p>
       </div>
@@ -87,7 +80,7 @@
     </div>
 
 
-    <!---------- Phone Number ----------->
+    <!-- Phone Number -->
     <div class="phone-number">
       <div class="phone-number-title">
         <p>Phone Number</p>
@@ -111,7 +104,7 @@
     </div>
 
 
-    <!------------ Email Address --------------->
+    <!-- Email Address -->
     <div class="email-address">
       <div class="email-address-title">
         <p>Email Address</p>
@@ -134,7 +127,9 @@
       </div>
     </div>
 
-    <!------------- Password ------------>
+
+
+    <!-- Password -->
     <div class="password">
       <div class="password-title">
         <p>Password</p>
@@ -167,69 +162,91 @@
         <a href="#" (click)="toggleEditModePassword($event)">Edit</a>
       </div>
     </div>
-
   </div><br>
 
-<!------------hotel description--------------->
-   <div class="hotel-description">
+  <!--activity description-->
+  <div class="activity-description">
     <div class="edit-link">
-      <a href="#" class="edit-link-hotel-des" (click)="toggleEditModeHotelDescription($event)">Edit</a>
+      <a href="#" class="edit-link-activity-des" (click)="toggleEditModeActivityDescription($event)">Edit</a>
     </div>
-    <div class="hotel-description-title">
-      <p>Hotel Description</p>
+    <div class="activity-description-title">
+      <p>Activity Description</p>
     </div>
-    <div class="hotel-description-content">
-      <ng-container *ngIf="editModeHotelDescription; else displayModeHotelDescription">
-        <textarea [(ngModel)]="hotelDescription">{{ HotelDescription }}</textarea>
-        <button class="save" (click)="onSaveHotelDescription()">Save</button>
-        <button class="cancel" (click)="onCancelHotelDescription()">Cancel</button>
+    <div class="activity-description-content">
+      <ng-container *ngIf="editModeActivityDescription; else displayModeActivityDescription">
+        <textarea [(ngModel)]="activityDescription">{{ ActivityDescription }}</textarea>
+        <button class="save" (click)="onSaveActivityDescription()">Save</button>
+        <button class="cancel" (click)="onCancelActivityDescription()">Cancel</button>
       </ng-container>
-      <ng-template #displayModeHotelDescription>
-        <p class="viewed-hotel-description">{{ HotelDescription }}</p>
+      <ng-template #displayModeActivityDescription>
+        <p class="viewed-activity-description">{{ ActivityDescription }}</p>
       </ng-template>
     </div>
   </div>
 
-
-<!--  languages-->
+  <!--  languages-->
   <div class="languages">
     <p class="languages-title"> Languages Spoken</p><br>
     <app-chip-list [chips]="languages"  (chipsChange)="languages = $event"></app-chip-list>
   </div>
 
-<!--facilities and services-->
+  <!--facilities and services-->
   <div class="facilities-and-services">
     <p class="facilities-and-services-title">Facilities & Services</p><br>
 
-    <div class="facilities">
-      <p class="facilities-title">Facilities</p>
+    <!--    services-->
+    <div class="services">
+      <p class="services-title">Services</p>
       <app-chip-list [chips]="chips"  (chipsChange)="chips = $event"></app-chip-list>
     </div>
 
-    <div class="services">
-      <p class="services-title">Services</p>
-      <app-chip-list [chips]="services"  (chipsChange)="services = $event"></app-chip-list>
-    </div>
-  </div><br>
-
-<!--  amenities-->
-  <div class="amenities">
-    <p class="amenities-title">Amenities</p>
-
-    <div class="common-amenities">
-      <p class="common-amenities-title">Most Common Amenities</p>
-      <app-chip-list [chips]="amenities" (chipsChange)="amenities = $event"></app-chip-list>
+    <!--  meals-->
+    <div class="meals">
+      <p class="meals-title"> Meals Served</p><br>
+      <app-chip-list [chips]="meals"  (chipsChange)="meals = $event"></app-chip-list>
     </div>
 
-    <div class="other-amenities">
-      <p class="other-amenities-title">Other Amenities</p>
-      <app-chip-list [chips]="oamenities"  (chipsChange)="oamenities = $event"></app-chip-list>
+    <!--    transportation-->
+    <div class="transport">
+      <p class="transport-title"> Transportation Methods </p><br>
+      <app-chip-list [chips]="transport"  (chipsChange)="transport = $event"></app-chip-list>
+    </div>
+  </div>
+
+<!--  payment details-->
+  <div class="payment">
+    <div class="payment-title">Payment Details</div>
+
+    <div class="rate">
+      <div class="rate-title">
+        <p>Lowest rate for one person</p>
+      </div>
+
+      <div class="rate-content">
+        <ng-container *ngIf="editModeRate; else displayModeRate">
+          <input type="text" [(ngModel)]="Rate" (blur)="toggleEditModeRate($event)">
+
+          <button class="save" (click)="onSaveRate()">Save</button>
+          <button class="cancel" (click)="onCancelRate()">Cancel</button>
+
+        </ng-container>
+        <ng-template #displayModeRate>
+          <p>{{ Rate }}</p>
+        </ng-template>
+      </div>
+
+      <div class="edit-link">
+        <a href="#" (click)="toggleEditModeRate($event)">Edit</a>
+      </div>
+    </div>
+
+    <div class="payment-methods">
+      <div class="payment-methods-title">Accepted Payment Methods</div>
+      <app-chip-list [chips]="payment"  (chipsChange)="payment = $event"></app-chip-list>
+
     </div>
 
   </div>
 
 
-
 </div>
-
-
