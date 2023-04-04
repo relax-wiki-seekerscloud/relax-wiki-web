@@ -18,7 +18,7 @@ import { FilterByBudgetComponent } from './components/filter-by-budget/filter-by
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { FilterByRatingComponent } from './components/filter-by-rating/filter-by-rating.component';
 import { HotelSearchSmallComponent } from './components/hotel-search-small/hotel-search-small.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FilterByEntertainmentActivityComponent } from './components/filter-by-entertainment-activity/filter-by-entertainment-activity.component';
 
 import {StatusBarComponent} from "./components/status-bar/status-bar.component";
@@ -27,6 +27,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { HotelCategoryContainerBoxComponent } from './components/hotel-category-container-box/hotel-category-container-box.component';
 import { HotelRoomContainerBoxComponent } from './components/hotel-room-container-box/hotel-room-container-box.component';
+import { FormSelectionBoxComponent } from './components/form-selection-box/form-selection-box.component';
+
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { BookingSummaryBox1Component } from './components/booking-summary-box1/booking-summary-box1.component';
@@ -78,45 +80,45 @@ import { BookingSummaryBox3Component } from './components/booking-summary-box3/b
     HotelRoomContainerBoxComponent,
     BookingSummaryBox1Component,
     BookingSummaryBox2Component,
-    BookingSummaryBox3Component
-
+    BookingSummaryBox3Component,
+    FormSelectionBoxComponent
+  ],
+    exports: [
+        FooterComponent,
+        FooterTwoComponent,
+        NavBarComponent,
+        NavBarTwoComponent,
+        RelaxwikiLogoComponent,
+        FilterByBudgetComponent,
+        FilterByRatingComponent,
+        HotelSearchSmallComponent,
+        FilterByEntertainmentActivityComponent,
+        StatusBarComponent,
+        InputFieldComponent,
+        HotelCategoryContainerBoxComponent,
+        HotelRoomContainerBoxComponent,
+        FormSelectionBoxComponent,
+        HotelRoomContainerBoxComponent,
+      FeedbackFormComponent,
+      PaginatorComponent,
+      BookingSummaryBox1Component,
+      BookingSummaryBox2Component,
+      BookingSummaryBox3Component
 
   ],
-  exports: [
-    FooterComponent,
-    FooterTwoComponent,
-    NavBarComponent,
-    NavBarTwoComponent,
-    RelaxwikiLogoComponent,
-    FilterByBudgetComponent,
-    FilterByRatingComponent,
-    HotelSearchSmallComponent,
-    FilterByEntertainmentActivityComponent,
-    StatusBarComponent,
-    InputFieldComponent,
-    HotelCategoryContainerBoxComponent,
-    HotelRoomContainerBoxComponent,
-    FeedbackFormComponent,
-    PaginatorComponent,
-    BookingSummaryBox1Component,
-    BookingSummaryBox2Component,
-    BookingSummaryBox3Component
 
 
+  imports: [
+    CommonModule,
+    ShareRoutingModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatIconModule
   ],
-
-
-    imports: [
-        CommonModule,
-        ShareRoutingModule,
-        MatCheckboxModule,
-        FormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatPaginatorModule,
-        MatIconModule
-    ]
-
 
 
 
