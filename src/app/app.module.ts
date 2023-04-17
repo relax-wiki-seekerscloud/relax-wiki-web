@@ -15,41 +15,50 @@ import {HotelOwnerProfileModule} from "./modules/console/modules/hotel-managemen
 
 import { MatIconModule } from '@angular/material/icon';
 import {UserProfileModule} from "./modules/console/modules/daily-process/modules/user-profile/user-profile.module";
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { DropzoneDirective } from './dropzone.directive';
+// import {StatusBarComponent} from "./modules/share/components/status-bar/status-bar.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DropzoneDirective,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        ShareModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        FormsModule,
-        SecurityModule,
-        ConsoleModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        FormsModule,
-        SecurityModule,
-        ConsoleModule,
-        HotelManagementModule,
-        HotelOwnerProfileModule,
-        MatIconModule,
-        UserProfileModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ShareModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    SecurityModule,
+    ConsoleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    SecurityModule,
+    ConsoleModule,
+    HotelManagementModule,
+    HotelOwnerProfileModule,
+    MatIconModule,
+    UserProfileModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
 
-    ],
-
+  ],
 
 
   providers: [],
+  exports: [
+    DropzoneDirective
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

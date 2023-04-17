@@ -22,7 +22,7 @@
                   <input matInput placeholder="John" formControlName="userFirstName" >
                 </mat-form-field>
 
-                <div *ngIf="signUpForm.get('userFirstName')?.invalid && signUpForm.get('userFirstName')?.touched">
+                <div *ngIf="signUpForm.get('userFirstName')?.invalid && (signUpForm.get('userFirstName')?.touched || signUpForm.get('userFirstName')?.dirty)">
                   <div *ngIf="signUpForm.get('userFirstName')?.errors?.['required']" class="error-message">
                     <small>First name is required.</small>
                   </div>
@@ -124,7 +124,8 @@
         <div class="icon"><img src="../../../../../assets/Images/apple.png" alt="apple signup"></div>
       </div>
       <div class="haveAccount">
-        <p>Already have an account? <a href="#">Login</a></p>
+        <p>Already have an account? <a href="
+">Login</a></p>
       </div>
 
       <div class="policy">

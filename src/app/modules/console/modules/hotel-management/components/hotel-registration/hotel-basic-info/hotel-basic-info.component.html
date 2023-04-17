@@ -13,6 +13,11 @@
         </app-input-field>
         <p>This name will be displayed to the guests</p>
       </div>
+      <div class="error-message" *ngIf="hotelListingForm.get('hotelName')?.invalid && (hotelListingForm.get('hotelName')?.dirty || hotelListingForm.get('hotelName')?.touched)">
+        <div *ngIf="hotelListingForm.get('hotelName')?.errors?.['required']"><small>Hotel name is required.</small></div>
+        <div *ngIf="hotelListingForm.get('hotelName')?.errors?.['minlength']"><small>Hotel name must be at least 3 characters long.</small> </div>
+      </div>
+
 
       <div class="form-group form-group-rating">
         <h4 class="required">Star Rating</h4>
@@ -27,6 +32,9 @@
           </mat-select>
         </mat-form-field>
       </div>
+      <div *ngIf="hotelListingForm.get('starRating')?.invalid && hotelListingForm.get('starRating')?.touched" class="error-message">
+        <small>Star rating is required.</small>
+      </div>
     </app-content-box-fill>
 
     <app-content-box-border boxName="Contact Details">
@@ -36,7 +44,9 @@
             <app-input-field
               [required]="true" name="Contact Person Name" [control]="hotelListingForm.controls.contactPersonName"></app-input-field>
           </div>
-
+          <div *ngIf="hotelListingForm.get('contactPersonName')?.invalid && hotelListingForm.get('contactPersonName')?.touched" class="error-message">
+            <small>Contact person name is required.</small>
+          </div>
 <!--          <div class="name-input-area">-->
 <!--            <div class="form-group">-->
 <!--              <h4 class="required">Contact Number 1</h4>-->
@@ -76,11 +86,16 @@
     <div class="address-area">
       <app-content-box-border boxName="Address">
         <div class="address-container">
+
           <div class="address-line">
+
             <h4 class="required">Street address</h4>
               <mat-form-field class="example-full-width address-input" appearance="fill">
                 <input matInput placeholder="e.g. 170/A street" formControlName="streetAddress">
               </mat-form-field>
+            <div *ngIf="hotelListingForm.get('streetAddress')?.invalid && hotelListingForm.get('streetAddress')?.touched" class="error-message">
+              <small>Street address is required.</small>
+            </div>
 
             <h4 class="">Address line 2</h4>
               <mat-form-field class="example-full-width address-input" appearance="fill">
@@ -89,8 +104,8 @@
           </div>
 
           <div></div>
-
           <div class="region-info">
+
             <h4 class="">Country/Region</h4>
               <mat-form-field class="example-full-width address-input" appearance="fill">
                 <input matInput placeholder="Canada" formControlName="country">

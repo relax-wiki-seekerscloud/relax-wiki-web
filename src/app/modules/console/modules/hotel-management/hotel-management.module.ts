@@ -38,6 +38,7 @@ import {
   HotelBookingSummaryComponent
 } from "./components/hotel-booking-process/hotel-booking-summary/hotel-booking-summary.component";
 import {HotelBookingProcessComponent} from "./components/hotel-booking-process/hotel-booking-process.component";
+import {AppModule} from "../../../../app.module";
 
 
 @NgModule({
@@ -70,22 +71,23 @@ import {HotelBookingProcessComponent} from "./components/hotel-booking-process/h
         HotelDefaultComponent,
 
     ],
-  imports: [
-    CommonModule,
-    HotelManagementRoutingModule,
-    ShareModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    //NgxMatIntlTelInputComponent,
-    MatButtonModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    FormsModule,
-    MatChipsModule,
-    MatIconModule
-  ],
+    imports: [
+        CommonModule,
+        HotelManagementRoutingModule,
+        ShareModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        //NgxMatIntlTelInputComponent,
+        MatButtonModule,
+        MatRadioModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatChipsModule,
+        MatIconModule,
+        AppModule
+    ],
 
 })
 export class HotelManagementModule { }

@@ -5,7 +5,6 @@ import {HotelListingService} from "../../../../../../share/services/hotel/hotel-
 import {Router} from "@angular/router";
 
 
-
 @Component({
   selector: 'app-hotel-basic-info',
   templateUrl: './hotel-basic-info.component.html',
